@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Data Protection — Kavach-AI</title>
+  <meta name="description" content="Kavach-AI data protection: find and protect sensitive data across prompts, logs and pipelines, govern what AI agents can retrieve and generate, and keep verification continuous." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600;700;750;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="../assets/logo.svg" />
+  <link rel="icon" type="image/png" href="../assets/logo.png" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="container nav-inner" id="navInner">
+      <a class="brand" href="../index.html"><img class="logo" src="../assets/logo.svg" alt="Kavach-AI logo" />Kavach <span class="ai">AI</span></a>
+                        <nav class="nav-links">
+        <a href="platform.html">Platform</a>
+        <a href="cloud-security.html">Cloud Security</a>
+        <a href="data-protection.html" class="active">Data Protection</a>
+        <a href="detection-rules.html">Detection Engine</a>
+        <a href="mcp-security.html">MCP Security</a>
+        <a href="../index.html#testimonials">Customers</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-sm btn-ghost" href="demo.html">Get a Demo</a>
+        <button class="nav-burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Home</a><span>→</span><span>Data Protection</span></div>
+      <h1>Protect the data. Verify the agents. <span style="color:var(--accent-2)">Govern the inference.</span></h1>
+      <p>
+        Set a protection policy once and enforce it at every layer — data stores, prompts,
+        logs and agent tool calls — so AI teams ship faster while security stays in control
+        right beside them.
+      </p>
+      <div class="hero-cta" style="margin-top:32px">
+        <a class="btn btn-accent" href="demo.html">Book a demo</a>
+        <a class="btn btn-ghost" href="#path">See the path to protection</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- The AI trust gap -->
+  <section class="section alt">
+    <div class="container">
+      <div class="feature-row" style="padding-top:0">
+        <div class="copy" data-reveal>
+          <span class="eyebrow">The AI trust gap</span>
+          <h2>There is no single leak. There is a chain of truths.</h2>
+          <p>
+            Agents are good at combining many individually permitted answers into something
+            the enterprise never intended to share. A document here, a billing query there,
+            a support transcript behind a third door — together they reconstruct business
+            knowledge that was supposed to stay inside.
+          </p>
+          <p>
+            Kavach-AI catches exposure before it compounds: sensitive data is found and
+            protected at the source, agent access is governed by policy at the gateway, and
+            every inference is checked for leakage.
+          </p>
+          <ul class="feature-list">
+            <li>Source-first protection — data is secured before the model ever sees it</li>
+            <li>Gateway enforcement that runs the same way on every call</li>
+            <li>Continuous measurement of exposure and coverage gaps</li>
+          </ul>
+        </div>
+        <div class="viz" data-reveal>
+          <div class="viz-title">An agent "harmless answers → sensitive knowledge" path</div>
+          <div class="viz-row"><span class="tag info">Q1</span><span>"which support tickets mention 'refund'?" · allowed</span></div>
+          <div class="viz-row"><span class="tag info">Q2</span><span>"average refund amount last quarter?" · allowed</span></div>
+          <div class="viz-row"><span class="tag info">Q3</span><span>"top VIP customer IDs by refunds?" · blocked at gateway</span></div>
+          <div class="viz-row"><span class="tag blocked">GUARD</span><span>policy: PII + identity merge → request denied</span></div>
+          <div class="viz-row"><span class="tag safe">COVERAGE</span><span>source column protected · data leaves app masked</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Path to protection: Discover -> Policy -> Insight -->
+  <section class="section" id="path">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">The path to protection</span>
+        <h2>Discover it. Decide on it. Keep improving it.</h2>
+        <p class="lead">
+          A three-phase loop that starts with knowing what you hold and ends with protection
+          that gets stronger over time.
+        </p>
+      </div>
+      <div class="arch" data-reveal>
+        <div class="arch-layer">
+          <h4>① Discover — define &amp; scan</h4>
+          <div class="arch-cards">
+            <div class="arch-card"><b>Custom ontology</b><span>review built-in classifiers, add your own</span></div>
+            <div class="arch-card"><b>Focused scope</b><span>connect data &amp; identity sources, validate scans</span></div>
+            <div class="arch-card"><b>Stay current</b><span>recurring scans inform new policy</span></div>
+          </div>
+        </div>
+        <div class="arch-layer">
+          <h4>② Policy — create &amp; deploy</h4>
+          <div class="arch-cards">
+            <div class="arch-card"><b>Data policies</b><span>how each classification should be protected</span></div>
+            <div class="arch-card"><b>AI agent policies</b><span>what agents may retrieve and generate</span></div>
+            <div class="arch-card"><b>Deploy</b><span>confirm scope, validate controls, activate</span></div>
+          </div>
+        </div>
+        <div class="arch-layer">
+          <h4>③ Insight — ensure &amp; improve</h4>
+          <div class="arch-cards">
+            <div class="arch-card"><b>Health check</b><span>protection &amp; policy coverage at a glance</span></div>
+            <div class="arch-card"><b>Troubleshoot</b><span>spot coverage gaps fast</span></div>
+            <div class="arch-card"><b>Measure &amp; tune</b><span>close gaps over time, continuously</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catchphrase band -->
+  <section class="cta-band">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--accent-2)">The gate</span>
+      <h2>Ask anything. Use everything. Expose nothing.</h2>
+      <p>Policy enforced at the gateway — deterministic, repeatable, and hard to talk your way around.</p>
+      <div class="hero-cta">
+        <a class="btn btn-accent" href="demo.html">Watch it enforce</a>
+        <a class="btn btn-ghost" href="#controls">AI safety controls</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI safety controls -->
+  <section class="section" id="controls">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">AI safety controls</span>
+        <h2>One platform to find, guard, and verify AI data use</h2>
+      </div>
+      <div class="rules-grid">
+        <article class="rule-card" data-reveal>
+          <div class="r-head"><h4>Find &amp; protect</h4><span class="sev high">SDK</span></div>
+          <p>SDKs that locate and protect sensitive data inside prompts, logs and unstructured text — powered by the Kavach detection engine.</p>
+          <div class="example-pattern">scan(prompt).protect(mask|redact|tokenize)</div>
+        </article>
+        <article class="rule-card" data-reveal>
+          <div class="r-head"><h4>Semantic guardrails</h4><span class="sev high">Govern</span></div>
+          <p>Govern how agents retrieve knowledge, reason over enterprise data, and formulate responses — at the model boundary, not after.</p>
+          <div class="example-pattern">retrieve → reason → respond · policy-checked</div>
+        </article>
+        <article class="rule-card" data-reveal>
+          <div class="r-head"><h4>Anonymization</h4><span class="sev critical">De-identify</span></div>
+          <p>Irreversibly de-identify regulated attributes while preserving analytical value for model training and business intelligence.</p>
+          <div class="example-pattern">name → Token_7AF3 · Aadhaar → (masked)</div>
+        </article>
+        <article class="rule-card" data-reveal>
+          <div class="r-head"><h4>Synthetic data</h4><span class="sev low">Generate</span></div>
+          <p>Produce realistic, privacy-safe datasets for testing, training and simulation — statistically faithful, never real.</p>
+          <div class="example-pattern">syngen(schema=txn, parity=0.98)</div>
+        </article>
+        <article class="rule-card" data-reveal>
+          <div class="r-head"><h4>Tokenization &amp; masking</h4><span class="sev high">Protect</span></div>
+          <p>Format-preserving tokenization and contextual masking keep regulated fields usable downstream without exposing the value.</p>
+          <div class="example-pattern">card 4111-••••-••••-1234 → usable in analytics</div>
+        </article>
+        <article class="rule-card" data-reveal>
+          <div class="r-head"><h4>Inference auditing</h4><span class="sev medium">Verify</span></div>
+          <p>Every model response is re-checked for leakage and policy drift, with a compliance-ready trail of who saw what.</p>
+          <div class="example-pattern">response leaked 1 token → quarantine + alert</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Protect data so AI can use it -->
+  <section class="section dark">
+    <div class="container">
+      <div class="feature-row" style="padding-top:0">
+        <div class="copy" data-reveal>
+          <span class="eyebrow">Secure AI data flows</span>
+          <h2>Protect the data so AI can actually use it</h2>
+          <p>
+            AI only delivers value when it can reason over enterprise knowledge — but
+            regulated and confidential data cannot flow freely into models, agents and
+            pipelines. Kavach-AI applies protection at the data layer before AI touches it,
+            so teams unlock more context safely.
+          </p>
+          <ul class="feature-list">
+            <li>Field-level protection applied before inference</li>
+            <li>Works regardless of LLM, framework or hyperscaler</li>
+            <li>Analytics and development keep using protected values</li>
+          </ul>
+        </div>
+        <div class="viz" data-reveal>
+          <div class="viz-title">Flow: raw data → protected → agent → verified response</div>
+          <div class="viz-row"><span class="tag info">SOURCE</span><span>customer core · Aadhaar · card numbers</span></div>
+          <div class="viz-row"><span class="tag warn">DATA LAYER</span><span>tokenize + mask on read (policy applied)</span></div>
+          <div class="viz-row"><span class="tag info">AGENT</span><span>retrieval over protected knowledge base</span></div>
+          <div class="viz-row"><span class="tag safe">GATEWAY</span><span>prompt scan · no PII/secrets detected</span></div>
+          <div class="viz-row"><span class="tag safe">RESPONSE</span><span>verified · nothing sensitive left the boundary</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editions -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Editions</span>
+        <h2>One platform. Three ways in.</h2>
+        <p class="lead">Start free, scale with the agents — or go straight to enterprise-grade controls.</p>
+      </div>
+      <div class="pillars">
+        <article class="pillar" data-reveal>
+          <span class="topline"><b>Developer</b> · free</span>
+          <div class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6M12 19h8"/></svg>
+          </div>
+          <h3>Start building today</h3>
+          <p>SDKs for finding and protecting sensitive data in prompts, logs and text. Free forever for developers.</p>
+          <div class="metric">→ API playground + docs included</div>
+        </article>
+        <article class="pillar" data-reveal>
+          <span class="topline"><b>Team</b> · recommended</span>
+          <div class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Secure agentic AI &amp; tooling</h3>
+          <p>Whatever your AI stack, governed data keeps agents powerful and trustworthy across models and MCP tools.</p>
+          <div class="metric">→ policy + guardrails + audit</div>
+        </article>
+        <article class="pillar" data-reveal>
+          <span class="topline"><b>Enterprise</b> · modular</span>
+          <div class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Full hybrid coverage</h3>
+          <p>Modular protection for AI, analytics and hybrid workloads — agnostic to frameworks, systems and hyperscalers.</p>
+          <div class="metric">→ data sovereignty + compliance automation</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact band -->
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Measured impact</span>
+        <h2>Protection, measured in outcomes</h2>
+      </div>
+      <div class="stats-band">
+        <div class="stat-block" data-reveal><b>-93%</b><span>alert noise with source-first protection</span></div>
+        <div class="stat-block" data-reveal><b>10x</b><span>faster triage on data exposure</span></div>
+        <div class="stat-block" data-reveal><b>100%</b><span>inference responses re-verified</span></div>
+        <div class="stat-block" data-reveal><b>0</b><span>regulated fields in plaintext at inference</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--accent-2)">Get started</span>
+      <h2>Make your existing stack safe for AI.</h2>
+      <p>Protect the data layer before your agents go live. Book a demo or check your readiness today.</p>
+      <div class="hero-cta">
+        <a class="btn btn-accent" href="demo.html">Book a demo</a>
+        <a class="btn btn-ghost" href="detection-rules.html">Explore the detection engine →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="../index.html"><img class="logo" src="../assets/logo.svg" alt="Kavach-AI logo" />Kavach-AI</a>
+          <p class="about">AI &amp; MCP Security for the Agentic Era. From code to production.</p>
+        </div>
+        <div>
+          <h5>Platform</h5>
+          <ul>
+            <li><a href="platform.html">The Inside-Out Platform</a></li>
+            <li><a href="cloud-security.html">Cloud Security</a></li>
+            <li><a href="data-protection.html">AI Data Protection</a></li>
+            <li><a href="detection-rules.html">Detection Engine</a></li>
+            <li><a href="demo.html">Request a Demo</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Detections</h5>
+          <ul>
+            <li><a href="detection-rules.html#prompt">Prompt Injection</a></li>
+            <li><a href="detection-rules.html#secrets">Secret Leakage</a></li>
+            <li><a href="detection-rules.html#pii">PII Detection</a></li>
+            <li><a href="detection-rules.html#cloud">Cloud Destruction</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Feed (Blog)</a></li>
+            <li><a href="https://kavach-ai.com" target="_blank" rel="noopener">kavach-ai.com</a></li>
+            <li><a href="mailto:corporate@kavach-ai.com">corporate@kavach-ai.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Kavach-AI · <a href="https://kavach-ai.com" target="_blank" rel="noopener">kavach-ai.com</a></span>
+        <span><a href="mailto:corporate@kavach-ai.com">corporate@kavach-ai.com</a> · Privacy · Security · Status</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

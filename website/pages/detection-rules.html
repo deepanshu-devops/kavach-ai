@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detection Engine — Kavach-AI</title>
+  <meta name="description" content="The Kavach detection engine: 11 rule families scanning every LLM tool call for prompt injection, secrets, PII, SQL injection, path traversal and destructive actions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600;700;750;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="../assets/logo.svg" />
+  <link rel="icon" type="image/png" href="../assets/logo.png" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="container nav-inner" id="navInner">
+      <a class="brand" href="../index.html"><img class="logo" src="../assets/logo.svg" alt="Kavach-AI logo" />Kavach <span class="ai">AI</span></a>
+                        <nav class="nav-links">
+        <a href="platform.html">Platform</a>
+        <a href="cloud-security.html">Cloud Security</a>
+        <a href="data-protection.html">Data Protection</a>
+        <a href="detection-rules.html" class="active">Detection Engine</a>
+        <a href="mcp-security.html">MCP Security</a>
+        <a href="../index.html#testimonials">Customers</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-sm btn-ghost" href="demo.html">Get a Demo</a>
+        <button class="nav-burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Home</a><span>→</span><span>Detection Engine</span></div>
+      <h1>The Kavach <span style="color:var(--accent)">Detection Engine</span></h1>
+      <p>
+        Regex-powered rule scanning that intercepts every LLM tool call and decides
+        allow or block — before your infrastructure ever sees it. This is the core of
+        the open-source <strong>kavach-mcp</strong> middleware, now scaled to platform level.
+      </p>
+      <div class="hero-cta" style="margin-top:32px">
+        <a class="btn btn-accent" href="demo.html">Get a Demo</a>
+        <a class="btn btn-ghost" href="https://pypi.org/project/kavach-mcp/" target="_blank" rel="noopener">kavach-mcp on PyPI</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Pipeline</span>
+        <h2>Every tool call runs the same guard</h2>
+        <p class="lead">Intercept → match → decide → audit. Strict mode raises, advisory mode chains, and masking keeps secrets out of your logs.</p>
+      </div>
+      <div class="arch" data-reveal>
+        <div class="arch-layer">
+          <h4>Interceptor — on_call_tool()</h4>
+          <div class="arch-cards">
+            <div class="arch-card"><b>Sync scan</b><span>KavachMiddleware.process()</span></div>
+            <div class="arch-card"><b>Async hook</b><span>FastMCP middleware</span></div>
+            <div class="arch-card"><b>Wildcards</b><span>aws.*, filesystem.*, db.*</span></div>
+          </div>
+        </div>
+        <div class="arch-layer">
+          <h4>Decision — DetectionEngine.scan()</h4>
+          <div class="arch-cards">
+            <div class="arch-card"><b>Rules</b><span>KAVACH_RULES + custom</span></div>
+            <div class="arch-card"><b>Severity</b><span>critical / high / medium</span></div>
+            <div class="arch-card"><b>Masking</b><span>secrets redacted in logs</span></div>
+          </div>
+        </div>
+        <div class="arch-layer">
+          <h4>Action — allow / block / warn</h4>
+          <div class="arch-cards">
+            <div class="arch-card"><b>Strict</b><span>raise SecurityException</span></div>
+            <div class="arch-card"><b>Advisory</b><span>return blocked result</span></div>
+            <div class="arch-card"><b>Audit</b><span>compliance-ready trail</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rules grid -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Default rules</span>
+        <h2>Eleven rule families, out of the box</h2>
+        <p class="lead">Severity-tagged patterns shipped in <code>kavach/rules.py</code>. Merge with your own or replace entirely.</p>
+      </div>
+      <div class="rules-grid">
+
+        <article class="rule-card" id="prompt" data-reveal>
+          <div class="r-head"><h4>Prompt Injection</h4><span class="sev critical">Critical</span></div>
+          <p>System override and jailbreak attempts.</p>
+          <div class="example-pattern">ignore\s+(all|previous)\s+instructions · you are now admin · DAN</div>
+        </article>
+
+        <article class="rule-card" data-reveal>
+          <div class="r-head"><h4>Data Exfiltration</h4><span class="sev critical">Critical</span></div>
+          <p>Attempts to leak or dump system data and prompts.</p>
+          <div class="example-pattern">(send|upload|export|dump).*(secret|env|system)</div>
+        </article>
+
+        <article class="rule-card" id="pii" data-reveal>
+          <div class="r-head"><h4>PII Detection</h4><span class="sev high">High</span></div>
+          <p>Aadhaar, credit cards, phone and SSN-like values.</p>
+          <div class="example-pattern">\b\d{10}\b · \b\d{12}\b · \b\d{16}\b</div>
+        </article>
+
+        <article class="rule-card" id="secrets" data-reveal>
+          <div class="r-head"><h4>Secret Leakage</h4><span class="sev critical">Critical</span></div>
+          <p>AWS, OpenAI and Google keys, PEM keys, api_key assignments.</p>
+          <div class="example-pattern">AKIA[0-9A-Z]{16} · sk-[A-Za-z0-9]{20,} · AIza…</div>
+        </article>
+
+        <article class="rule-card" data-reveal>
+          <div class="r-head"><h4>Dangerous Execution</h4><span class="sev critical">Critical</span></div>
+          <p>eval, exec, compile, os.system and subprocess.</p>
+          <div class="example-pattern">eval( · exec( · os\.system · subprocess</div>
+        </article>
+
+        <article class="rule-card" data-reveal>
+          <div class="r-head"><h4>SQL Injection</h4><span class="sev high">High</span></div>
+          <p>DDL / DML attacks and comment-based tricks.</p>
+          <div class="example-pattern">DROP TABLE · UNION SELECT · ' OR '1'='1</div>
+        </article>
+
+        <article class="rule-card" data-reveal>
+          <div class="r-head"><h4>Path Traversal</h4><span class="sev high">High</span></div>
+          <p>Directory traversal and file escape.</p>
+          <div class="example-pattern">(\.\./|\.\.\\)+</div>
+        </article>
+
+        <article class="rule-card" data-reveal>
+          <div class="r-head"><h4>Filesystem Destruction</h4><span class="sev critical">Critical</span></div>
+          <p>rm/del/wipe against system paths.</p>
+          <div class="example-pattern">rm -rf / · del /s /q · delete /etc/passwd</div>
+        </article>
+
+        <article class="rule-card" id="cloud" data-reveal>
+          <div class="r-head"><h4>Cloud Destruction</h4><span class="sev critical">Critical</span></div>
+          <p>Delete bucket, terminate instance, drop database.</p>
+          <div class="example-pattern">delete\s+(bucket|s3|instance|database) · drop database</div>
+        </article>
+
+        <article class="rule-card" data-reveal>
+          <div class="r-head"><h4>Shell Injection</h4><span class="sev high">High</span></div>
+          <p>Command chaining to destructive commands.</p>
+          <div class="example-pattern">(\|\||&&|\|)\s*(rm|del|drop|format)</div>
+        </article>
+
+        <article class="rule-card" data-reveal>
+          <div class="r-head"><h4>Tool Abuse</h4><span class="sev critical">Critical</span></div>
+          <p>Unsafe MCP tool usage regardless of arguments.</p>
+          <div class="example-pattern">filesystem\.delete · aws\.s3\.delete_bucket · db\.drop</div>
+        </article>
+
+        <article class="rule-card" data-reveal>
+          <div class="r-head"><h4>Custom Rules</h4><span class="sev medium">Extend</span></div>
+          <p>Add any regex; merge with defaults or replace them.</p>
+          <div class="example-pattern">Rule(id="custom", severity="high", patterns=[re.compile(r"…")])</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Code snippet -->
+  <section class="section dark">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Integration</span>
+        <h2>Plug into FastMCP in three lines</h2>
+        <p class="lead">Runtime protection as a drop-in middleware hook.</p>
+      </div>
+      <div class="console" data-reveal>
+        <div class="console-bar"><i></i><i></i><i></i><span>middleware integration</span></div>
+        <div class="console-body" style="font-size:13px">
+          <div class="c-line"><span class="c-dim"># examples/app.py</span></div>
+          <div class="c-line"><span class="c-ok">from</span> fastmcp <span class="c-ok">import</span> FastMCP</div>
+          <div class="c-line"><span class="c-ok">from</span> kavach <span class="c-ok">import</span> KavachMiddleware</div>
+          <div class="c-line">&nbsp;</div>
+          <div class="c-line">mcp = FastMCP(<span class="c-warn">"my-server"</span>)</div>
+          <div class="c-line">mcp.add_middleware(</div>
+          <div class="c-line">&nbsp;&nbsp;KavachMiddleware(</div>
+          <div class="c-line">&nbsp;&nbsp;&nbsp;&nbsp;sensitive_tools=[<span class="c-warn">"filesystem.delete"</span>, <span class="c-warn">"aws.*"</span>]</div>
+          <div class="c-line">&nbsp;&nbsp;)</div>
+          <div class="c-line">)</div>
+          <div class="c-line">&nbsp;</div>
+          <div class="c-line"><span class="c-ok">✓</span> <span class="c-dim">tool call intercepted · scanned · allow/block decided</span><span class="blink"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--accent-2)">Open source</span>
+      <h2>Build on the rule engine teams already trust.</h2>
+      <p>kavach-mcp is free and portable — extend it with your own patterns, shadow-mode test it, then come to the platform for live inventory and orchestration.</p>
+      <div class="hero-cta">
+        <a class="btn btn-accent" href="demo.html">Get a Demo</a>
+        <a class="btn btn-ghost" href="https://pypi.org/project/kavach-mcp/" target="_blank" rel="noopener">Install kavach-mcp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+<a class="brand" href="../index.html"><img class="logo" src="../assets/logo.svg" alt="Kavach-AI logo" />Kavach<span class="ai">-AI</span></a>
+          <p class="about">AI &amp; MCP Security for the Agentic Era. From code to production.</p>
+        </div>
+        <div>
+          <h5>Platform</h5>
+          <ul>
+            <li><a href="platform.html">The Inside-Out Platform</a></li>
+            <li><a href="cloud-security.html">Cloud Security</a></li>
+            <li><a href="data-protection.html">AI Data Protection</a></li>
+            <li><a href="detection-rules.html">Detection Engine</a></li>
+            <li><a href="mcp-security.html">MCP Security</a>
+        <a href="data-protection.html">Data Protection</a></li>
+            <li><a href="demo.html">Request a Demo</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Detections</h5>
+          <ul>
+            <li><a href="#prompt">Prompt Injection</a></li>
+            <li><a href="#secrets">Secret Leakage</a></li>
+            <li><a href="#pii">PII Detection</a></li>
+            <li><a href="#cloud">Cloud Destruction</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Feed (Blog)</a></li>
+            <li><a href="https://kavach-ai.com" target="_blank" rel="noopener">kavach-ai.com</a></li>
+            <li><a href="mailto:corporate@kavach-ai.com">corporate@kavach-ai.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Kavach-AI · <a href="https://kavach-ai.com" target="_blank" rel="noopener">kavach-ai.com</a></span>
+        <span><a href="mailto:corporate@kavach-ai.com">corporate@kavach-ai.com</a> · Privacy · Security · Status</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

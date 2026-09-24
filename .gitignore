@@ -1,0 +1,15 @@
+# Reference pages downloaded for design research (copyrighted content)
+Upwind Security_ Cloud & AI Security for the Realtime Era.html
+Protegrity _ AI Security and Data Protection for Enterprises.html
+
+# Python packaging artifacts
+*.tar.gz
+*.egg-info/
+__pycache__/
+*.py[cod]
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Kavach AI">
+  <defs>
+    <linearGradient id="kb" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#26214a"/>
+      <stop offset="0.55" stop-color="#181531"/>
+      <stop offset="1" stop-color="#0f0d20"/>
+    </linearGradient>
+    <linearGradient id="ke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#57c1fe"/>
+      <stop offset="0.5" stop-color="#7a5cff"/>
+      <stop offset="1" stop-color="#f863f5"/>
+    </linearGradient>
+    <linearGradient id="kc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2583c"/>
+      <stop offset="1" stop-color="#ffa06b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#57c1fe" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#57c1fe" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Shield body -->
+  <path d="M32 3.5 C36.5 3.5 40.5 5.3 44 7.2 L55 12.4 C57 13.5 58.5 15.6 58.5 17.8 V29.5 C58.5 46.9 47.6 58.4 32.5 62.5 C17.4 58.4 6.5 46.9 6.5 29.5 V17.8 C6.5 15.6 8 13.5 10 12.4 L21 7.2 C24.5 5.3 28.5 3.5 32 3.5 Z"
+        fill="url(#kb)"/>
+  <path d="M32 3.5 C36.5 3.5 40.5 5.3 44 7.2 L55 12.4 C57 13.5 58.5 15.6 58.5 17.8 V29.5 C58.5 46.9 47.6 58.4 32.5 62.5 C17.4 58.4 6.5 46.9 6.5 29.5 V17.8 C6.5 15.6 8 13.5 10 12.4 L21 7.2 C24.5 5.3 28.5 3.5 32 3.5 Z"
+        fill="none" stroke="url(#ke)" stroke-width="1.5" stroke-linejoin="round" opacity="0.95"/>
+
+  <!-- Top gloss -->
+  <path d="M12 13.5 C18 8.5 25 5.8 32.5 5.8 C40 5.8 47 8.5 53 13.5"
+        fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- Ambient glow behind AI core -->
+  <circle cx="32.5" cy="30.5" r="12" fill="url(#glow)"/>
+
+  <!-- Agent orbit ring -->
+  <circle cx="32.5" cy="30.5" r="9.5" fill="none" stroke="rgba(159,232,112,0.55)" stroke-width="1.1" stroke-dasharray="3.4 3.4"/>
+
+  <!-- Core orb (the AI model) -->
+  <circle cx="32.5" cy="30.5" r="3.7" fill="url(#kc)"/>
+  <circle cx="31.4" cy="29.6" r="1.1" fill="rgba(255,255,255,0.55)"/>
+
+  <!-- Agent nodes + links -->
+  <path d="M32.5 30.5 L32.5 22.2 M32.5 30.5 L39.3 34 M32.5 30.5 L25.7 34" stroke="rgba(159,232,112,0.6)" stroke-width="1.1" stroke-linecap="round"/>
+  <circle cx="32.5" cy="21.6" r="1.9" fill="#9fe870"/>
+  <circle cx="40" cy="34.6" r="1.9" fill="#57c1fe"/>
+  <circle cx="25" cy="34.6" r="1.9" fill="#f863f5"/>
+
+  <!-- Grounding chevron "Kavach = armor" -->
+  <path d="M22.5 49.5 C26.2 53.6 29.4 55.8 32.5 55.8 C35.6 55.8 38.8 53.6 42.5 49.5"
+        fill="none" stroke="url(#kc)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
