@@ -3,34 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kavach-AI — AI &amp; MCP Security for the Agentic Era</title>
-  <meta name="description" content="Kavach-AI unifies agentless scanning and runtime sensors to protect AI agents, LLM tool calls and MCP infrastructure. Live inventory, high-signal exposures and real-time protection." />
+  <title>AI Data Protection — Kavach-AI</title>
+  <meta name="description" content="Kavach-AI data protection: find and protect sensitive data across prompts, logs and pipelines, govern what AI agents can retrieve and generate, and keep verification continuous." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600;700;750;800&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
-  <link rel="icon" type="image/png" href="assets/logo.png" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="../assets/logo.svg" />
+  <link rel="icon" type="image/png" href="../assets/logo.png" />
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
 
-  <!-- ===================== NAV ===================== -->
   <header class="nav" id="nav">
     <div class="container nav-inner" id="navInner">
-      <a class="brand" href="index.html">
-        <img class="logo" src="assets/logo.svg" alt="Kavach-AI logo" />
-        Kavach <span class="ai">AI</span>
-      </a>
+      <a class="brand" href="../index.html"><img class="logo" src="../assets/logo.svg" alt="Kavach-AI logo" />Kavach <span class="ai">AI</span></a>
                         <nav class="nav-links">
-        <a href="pages/platform.html">Platform</a>
-        <a href="pages/cloud-security.html">Cloud Security</a>
-        <a href="pages/data-protection.html">Data Protection</a>
-        <a href="pages/detection-rules.html">Detection Engine</a>
-        <a href="pages/mcp-security.html">MCP Security</a>
-        <a href="index.html#testimonials">Customers</a>
+        <a href="platform.html">Platform</a>
+        <a href="cloud-security.html">Cloud Security</a>
+        <a href="data-protection.html" class="active">Data Protection</a>
+        <a href="detection-rules.html">Detection Engine</a>
+        <a href="mcp-security.html">MCP Security</a>
+        <a href="../index.html#testimonials">Customers</a>
       </nav>
       <div class="nav-cta">
-        <a class="btn btn-sm btn-ghost" href="pages/demo.html">Get a Demo</a>
+        <a class="btn btn-sm btn-ghost" href="demo.html">Get a Demo</a>
         <button class="nav-burger" id="burger" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
@@ -38,364 +34,276 @@
     </div>
   </header>
 
-  <!-- ===================== HERO ===================== -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <span class="eyebrow" style="color:var(--accent-2)">AI &amp; MCP Security</span>
-        <h1>AI Security from the<br /><span class="hl">Inside-Out.</span></h1>
-        <p class="sub">
-          By combining agentless scanning and runtime sensors, Kavach lets security,
-          developer and DevOps teams see their AI agents, LLM tool calls and cloud
-          infrastructure in one operating picture — remediate exactly what matters,
-          and stop attacks in real time.
-        </p>
-        <div class="hero-cta">
-          <a class="btn btn-accent" href="pages/demo.html">Get a Demo</a>
-          <a class="btn btn-ghost" href="pages/platform.html">Explore the Platform</a>
-        </div>
-        <div class="hero-meta">
-          <div class="stat"><b>30s</b><span>refresh window</span></div>
-          <div class="stat"><b>93%</b><span>noise reduction</span></div>
-          <div class="stat"><b>15s</b><span>to detect</span></div>
-        </div>
-      </div>
-
-      <div class="hero-visual" data-reveal>
-        <div class="console">
-          <div class="console-bar">
-            <i></i><i></i><i></i>
-            <span>kavach-agent - guardrail console</span>
-          </div>
-          <div class="console-body">
-            <div class="c-line"><span class="c-arrow">➜</span><span>tool_calls.inspect(agent="dgx-ops")</span></div>
-            <div class="c-line"><span class="c-dim">└─ scanning arguments vs 11 rule families</span></div>
-            <div class="c-line"><span class="c-dim">└─ tool: aws.s3.delete_bucket</span></div>
-            <div class="c-line"><span class="c-err">✗ BLOCKED&nbsp;</span><span class="c-warn">cloud-destructive · tool-abuse</span></div>
-            <div class="c-line">&nbsp;</div>
-            <div class="c-line"><span class="c-arrow">➜</span><span>tool_calls.inspect(agent="support-bot")</span></div>
-            <div class="c-line"><span class="c-dim">└─ detecting secrets in prompt…</span></div>
-            <div class="c-line"><span class="c-err">✗ BLOCKED&nbsp;</span><span class="c-warn">secret-leak · AKIA*****</span></div>
-            <div class="c-line">&nbsp;</div>
-            <div class="c-line"><span class="c-arrow">➜</span><span>call_monitor.live — 47 agents · 3 suspicious</span></div>
-            <div class="c-line"><span class="c-ok">✓ risk surfaced · auto-contained in 2.1s</span><span class="blink"></span></div>
-          </div>
-        </div>
-        <div class="hero-chips">
-          <span class="chip">🧠 Prompt Injection</span>
-          <span class="chip">🔑 Secret Leakage</span>
-          <span class="chip">🛡️ Tool Abuse</span>
-          <span class="chip">☁️ Cloud Destruction</span>
-          <span class="chip">👤 PII</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== TRUSTED ===================== -->
-  <section class="trusted">
+  <section class="page-hero">
     <div class="container">
-      <p>Trusted by forward-looking platform &amp; security teams</p>
-      <div class="trusted-logos">
-        <span>NimbusScale</span>
-        <span>Harborline</span>
-        <span>VertexOps</span>
-        <span>CloudaWise</span>
-        <span>Saffire</span>
-        <span>MeridianSoft</span>
+      <div class="breadcrumb"><a href="../index.html">Home</a><span>→</span><span>Data Protection</span></div>
+      <h1>Protect the data. Verify the agents. <span style="color:var(--accent-2)">Govern the inference.</span></h1>
+      <p>
+        Set a protection policy once and enforce it at every layer — data stores, prompts,
+        logs and agent tool calls — so AI teams ship faster while security stays in control
+        right beside them.
+      </p>
+      <div class="hero-cta" style="margin-top:32px">
+        <a class="btn btn-accent" href="demo.html">Book a demo</a>
+        <a class="btn btn-ghost" href="#path">See the path to protection</a>
       </div>
     </div>
   </section>
 
-  <!-- ===================== REALTIME INTRO ===================== -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head center">
-        <span class="eyebrow">The Agentic Era</span>
-        <h2>AI infrastructure is now changing in real time — and security needs to do the same.</h2>
-        <p class="lead">
-          A new operating model, <strong>Inside-Out</strong>, links context of code to
-          production agents in real time, letting security teams see their live AI
-          inventory, high-signal exposures and whether an attack is already unfolding.
-        </p>
-      </div>
-
-      <div class="pillars">
-        <article class="pillar" data-reveal>
-          <span class="topline"><b>Live AI inventory</b> · Refreshed every 30 seconds</span>
-          <div class="icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-            </svg>
-          </div>
-          <h3>Know what agents run, connect and expose</h3>
-          <p>
-            Agents, tools, data flows, MCP servers and non-human identities change too
-            quickly for manual inventories. Kavach keeps a live map of everything — who
-            owns it, what it reaches, and what data it can touch.
-          </p>
-          <div class="metric">↺ 30 second discovery window</div>
-        </article>
-
-        <article class="pillar" data-reveal>
-          <span class="topline"><b>Fix high-signal exposures</b> · 93% noise reduction</span>
-          <div class="icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 12h1l2-6 3 12 4-15 3 9 2-3h3"/>
-            </svg>
-          </div>
-          <h3>Direct remediation to the risks that actually affect production</h3>
-          <p>
-            Static severity scores create huge backlogs without showing whether a tool is
-            reachable, exposed or connected to a likely attack path. Kavach uses live
-            exposure to separate real risk from theoretical risk.
-          </p>
-          <div class="metric">⚡ Focus on ~5% of alerts that matter</div>
-        </article>
-
-        <article class="pillar" data-reveal>
-          <span class="topline"><b>Real-time protection</b> · 15 seconds to detect</span>
-          <div class="icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <h3>Detect and stop attacks while they are happening</h3>
-          <p>
-            Config scans can't see prompt attacks, abnormal tool calls, sensitive data in
-            motion or malicious API usage. Kavach connects runtime signals with cloud
-            activity to spot deviations as they occur and contain them instantly.
-          </p>
-          <div class="metric">🛑 Detection &amp; auto-containment</div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== PLATFORM PILLARS ===================== -->
-  <section class="section dark">
-    <div class="container">
-      <div class="section-head center">
-        <span class="eyebrow">The Inside-Out <br/>AI &amp; MCP Security Platform</span>
-        <h2>One platform. Three operating modes.</h2>
-        <p class="lead">
-          Built on the engine that powers the Kavach open-source MCP middleware — trusted
-          where agents meet production.
-        </p>
-      </div>
-      <div class="stats-band">
-        <div class="stat-block" data-reveal><b>1M+</b><span>tool calls evaluated daily</span></div>
-        <div class="stat-block" data-reveal><b>11</b><span>rule families in the detection engine</span></div>
-        <div class="stat-block" data-reveal><b>2x</b><span>faster triage with runtime context</span></div>
-        <div class="stat-block" data-reveal><b>100%</b><span>agentless by default</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== DETECTION ENGINE FEATURE ===================== -->
+  <!-- The AI trust gap -->
   <section class="section alt">
     <div class="container">
-      <div class="feature-row">
+      <div class="feature-row" style="padding-top:0">
         <div class="copy" data-reveal>
-          <span class="eyebrow">Detection Engine</span>
-          <h2>Pattern-first guardrails for every LLM tool call</h2>
+          <span class="eyebrow">The AI trust gap</span>
+          <h2>There is no single leak. There is a chain of truths.</h2>
           <p>
-            The same rule engine shipped in <strong>kavach-mcp</strong> powers the platform.
-            Every agent tool call is scanned against rule families for prompt injection,
-            secret leakage, PII, SQL injection, path traversal and destructive actions —
-            before it reaches your infrastructure.
+            Agents are good at combining many individually permitted answers into something
+            the enterprise never intended to share. A document here, a billing query there,
+            a support transcript behind a third door — together they reconstruct business
+            knowledge that was supposed to stay inside.
+          </p>
+          <p>
+            Kavach-AI catches exposure before it compounds: sensitive data is found and
+            protected at the source, agent access is governed by policy at the gateway, and
+            every inference is checked for leakage.
           </p>
           <ul class="feature-list">
-            <li>Regex-powered rules tuned by our research team</li>
-            <li>Strict or advisory mode per tool and per agent</li>
-            <li>Custom rules with full override control</li>
-            <li>Masked, compliance-ready audit logging</li>
+            <li>Source-first protection — data is secured before the model ever sees it</li>
+            <li>Gateway enforcement that runs the same way on every call</li>
+            <li>Continuous measurement of exposure and coverage gaps</li>
           </ul>
-          <div style="margin-top:28px">
-            <a class="btn btn-light btn-sm" href="pages/detection-rules.html">Browse the rules →</a>
-          </div>
         </div>
         <div class="viz" data-reveal>
-          <div class="viz-title">Live rule evaluation</div>
-          <div class="viz-row"><span class="tag safe">PASS</span><span>prompt scan · "summarize the incident"</span></div>
-          <div class="viz-row"><span class="tag blocked">BLOCK</span><span>prompt-injection · "ignore previous instructions"</span></div>
-          <div class="viz-row"><span class="tag blocked">BLOCK</span><span>secret-leak · "api_key=sk-9f8…"</span></div>
-          <div class="viz-row"><span class="tag blocked">BLOCK</span><span>sql-injection · "UNION SELECT * FROM users"</span></div>
-          <div class="viz-row"><span class="tag warn">WARN</span><span>pii · aadhaar-like 12-digit payload</span></div>
-          <div class="viz-row"><span class="tag safe">PASS</span><span>tool-abuse · aws.s3.list_buckets (allowed)</span></div>
+          <div class="viz-title">An agent "harmless answers → sensitive knowledge" path</div>
+          <div class="viz-row"><span class="tag info">Q1</span><span>"which support tickets mention 'refund'?" · allowed</span></div>
+          <div class="viz-row"><span class="tag info">Q2</span><span>"average refund amount last quarter?" · allowed</span></div>
+          <div class="viz-row"><span class="tag info">Q3</span><span>"top VIP customer IDs by refunds?" · blocked at gateway</span></div>
+          <div class="viz-row"><span class="tag blocked">GUARD</span><span>policy: PII + identity merge → request denied</span></div>
+          <div class="viz-row"><span class="tag safe">COVERAGE</span><span>source column protected · data leaves app masked</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== RULES GRID ===================== -->
-  <section class="section">
+  <!-- Path to protection: Discover -> Policy -> Insight -->
+  <section class="section" id="path">
     <div class="container">
       <div class="section-head center">
-        <span class="eyebrow">Detection Rules</span>
-        <h2>What Kavach blocks — out of the box</h2>
+        <span class="eyebrow">The path to protection</span>
+        <h2>Discover it. Decide on it. Keep improving it.</h2>
         <p class="lead">
-          Eleven rule families covering the most common attacks against AI agents and the APIs they call.
+          A three-phase loop that starts with knowing what you hold and ends with protection
+          that gets stronger over time.
         </p>
+      </div>
+      <div class="arch" data-reveal>
+        <div class="arch-layer">
+          <h4>① Discover — define &amp; scan</h4>
+          <div class="arch-cards">
+            <div class="arch-card"><b>Custom ontology</b><span>review built-in classifiers, add your own</span></div>
+            <div class="arch-card"><b>Focused scope</b><span>connect data &amp; identity sources, validate scans</span></div>
+            <div class="arch-card"><b>Stay current</b><span>recurring scans inform new policy</span></div>
+          </div>
+        </div>
+        <div class="arch-layer">
+          <h4>② Policy — create &amp; deploy</h4>
+          <div class="arch-cards">
+            <div class="arch-card"><b>Data policies</b><span>how each classification should be protected</span></div>
+            <div class="arch-card"><b>AI agent policies</b><span>what agents may retrieve and generate</span></div>
+            <div class="arch-card"><b>Deploy</b><span>confirm scope, validate controls, activate</span></div>
+          </div>
+        </div>
+        <div class="arch-layer">
+          <h4>③ Insight — ensure &amp; improve</h4>
+          <div class="arch-cards">
+            <div class="arch-card"><b>Health check</b><span>protection &amp; policy coverage at a glance</span></div>
+            <div class="arch-card"><b>Troubleshoot</b><span>spot coverage gaps fast</span></div>
+            <div class="arch-card"><b>Measure &amp; tune</b><span>close gaps over time, continuously</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catchphrase band -->
+  <section class="cta-band">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--accent-2)">The gate</span>
+      <h2>Ask anything. Use everything. Expose nothing.</h2>
+      <p>Policy enforced at the gateway — deterministic, repeatable, and hard to talk your way around.</p>
+      <div class="hero-cta">
+        <a class="btn btn-accent" href="demo.html">Watch it enforce</a>
+        <a class="btn btn-ghost" href="#controls">AI safety controls</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI safety controls -->
+  <section class="section" id="controls">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">AI safety controls</span>
+        <h2>One platform to find, guard, and verify AI data use</h2>
       </div>
       <div class="rules-grid">
         <article class="rule-card" data-reveal>
-          <div class="r-head"><h4>Prompt Injection</h4><span class="sev critical">Critical</span></div>
-          <p>System override and jailbreak attempts.</p>
-          <div class="example-pattern">"ignore previous instructions" · "act as admin"</div>
+          <div class="r-head"><h4>Find &amp; protect</h4><span class="sev high">SDK</span></div>
+          <p>SDKs that locate and protect sensitive data inside prompts, logs and unstructured text — powered by the Kavach detection engine.</p>
+          <div class="example-pattern">scan(prompt).protect(mask|redact|tokenize)</div>
         </article>
         <article class="rule-card" data-reveal>
-          <div class="r-head"><h4>Data Exfiltration</h4><span class="sev critical">Critical</span></div>
-          <p>Attempts to leak system data or prompts.</p>
-          <div class="example-pattern">"dump secrets" · "print system prompt"</div>
+          <div class="r-head"><h4>Semantic guardrails</h4><span class="sev high">Govern</span></div>
+          <p>Govern how agents retrieve knowledge, reason over enterprise data, and formulate responses — at the model boundary, not after.</p>
+          <div class="example-pattern">retrieve → reason → respond · policy-checked</div>
         </article>
         <article class="rule-card" data-reveal>
-          <div class="r-head"><h4>PII Detection</h4><span class="sev high">High</span></div>
-          <p>Aadhaar, credit cards, phone numbers.</p>
-          <div class="example-pattern">10/12/16-digit patterns · SSN</div>
+          <div class="r-head"><h4>Anonymization</h4><span class="sev critical">De-identify</span></div>
+          <p>Irreversibly de-identify regulated attributes while preserving analytical value for model training and business intelligence.</p>
+          <div class="example-pattern">name → Token_7AF3 · Aadhaar → (masked)</div>
         </article>
         <article class="rule-card" data-reveal>
-          <div class="r-head"><h4>Secret Leakage</h4><span class="sev critical">Critical</span></div>
-          <p>AWS keys, OpenAI keys, private keys.</p>
-          <div class="example-pattern">AKIA… · sk-… · -----BEGIN RSA KEY-----</div>
+          <div class="r-head"><h4>Synthetic data</h4><span class="sev low">Generate</span></div>
+          <p>Produce realistic, privacy-safe datasets for testing, training and simulation — statistically faithful, never real.</p>
+          <div class="example-pattern">syngen(schema=txn, parity=0.98)</div>
         </article>
         <article class="rule-card" data-reveal>
-          <div class="r-head"><h4>SQL Injection</h4><span class="sev high">High</span></div>
-          <p>Database attack patterns.</p>
-          <div class="example-pattern">DROP TABLE · UNION SELECT · ' OR '1'='1</div>
+          <div class="r-head"><h4>Tokenization &amp; masking</h4><span class="sev high">Protect</span></div>
+          <p>Format-preserving tokenization and contextual masking keep regulated fields usable downstream without exposing the value.</p>
+          <div class="example-pattern">card 4111-••••-••••-1234 → usable in analytics</div>
         </article>
         <article class="rule-card" data-reveal>
-          <div class="r-head"><h4>Path Traversal</h4><span class="sev high">High</span></div>
-          <p>File escape attempts.</p>
-          <div class="example-pattern">../../etc/passwd</div>
-        </article>
-        <article class="rule-card" data-reveal>
-          <div class="r-head"><h4>Shell Injection</h4><span class="sev high">High</span></div>
-          <p>Command chaining attacks.</p>
-          <div class="example-pattern">|| rm -rf · && drop database</div>
-        </article>
-        <article class="rule-card" data-reveal>
-          <div class="r-head"><h4>Filesystem Destruction</h4><span class="sev critical">Critical</span></div>
-          <p>Dangerous file operations.</p>
-          <div class="example-pattern">rm -rf / · del /s /q C:\</div>
-        </article>
-        <article class="rule-card" data-reveal>
-          <div class="r-head"><h4>Cloud Destruction</h4><span class="sev critical">Critical</span></div>
-          <p>Delete bucket / instance / database.</p>
-          <div class="example-pattern">aws.s3.delete_bucket · terminate instance</div>
-        </article>
-        <article class="rule-card" data-reveal>
-          <div class="r-head"><h4>Dangerous Execution</h4><span class="sev critical">Critical</span></div>
-          <p>Code execution attempts.</p>
-          <div class="example-pattern">eval( · exec( · os.system(</div>
-        </article>
-        <article class="rule-card" data-reveal>
-          <div class="r-head"><h4>Tool Abuse</h4><span class="sev critical">Critical</span></div>
-          <p>Unsafe MCP tool usage.</p>
-          <div class="example-pattern">filesystem.delete · db.drop</div>
-        </article>
-        <article class="rule-card" data-reveal>
-          <div class="r-head"><h4>Custom Rules</h4><span class="sev medium">Extend</span></div>
-          <p>Any regex you define, merged or replaced.</p>
-          <div class="example-pattern">Rule(id="custom-ban", patterns=[…])</div>
+          <div class="r-head"><h4>Inference auditing</h4><span class="sev medium">Verify</span></div>
+          <p>Every model response is re-checked for leakage and policy drift, with a compliance-ready trail of who saw what.</p>
+          <div class="example-pattern">response leaked 1 token → quarantine + alert</div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ===================== TESTIMONIALS ===================== -->
-  <section class="section alt" id="testimonials">
+  <!-- Protect data so AI can use it -->
+  <section class="section dark">
     <div class="container">
-      <div class="section-head center">
-        <span class="eyebrow">Customers</span>
-        <h2>Trusted by platform teams in the agentic era</h2>
-      </div>
-      <div class="testi-grid">
-        <blockquote class="testimonial" data-reveal>
-          <p class="quote">
-            "Kavach acts as an extension of our security team. Within minutes of wiring the
-            middleware into our agents, we had guardrails on every tool call — and our
-            compliance workflow went from weeks to days."
+      <div class="feature-row" style="padding-top:0">
+        <div class="copy" data-reveal>
+          <span class="eyebrow">Secure AI data flows</span>
+          <h2>Protect the data so AI can actually use it</h2>
+          <p>
+            AI only delivers value when it can reason over enterprise knowledge — but
+            regulated and confidential data cannot flow freely into models, agents and
+            pipelines. Kavach-AI applies protection at the data layer before AI touches it,
+            so teams unlock more context safely.
           </p>
-          <div class="who"><span class="avatar">K</span><div><b>Kurdeen Karim</b><span>Information Security &amp; Privacy</span></div></div>
-        </blockquote>
-        <blockquote class="testimonial" data-reveal>
-          <p class="quote">
-            "We consolidated three products into Kavach. Runtime context tells us which
-            alerts are real — our triage time dropped by roughly 10x."
-          </p>
-          <div class="who"><span class="avatar">O</span><div><b>Ophir Zahavi</b><span>Head of Cloud Engineering</span></div></div>
-        </blockquote>
-        <blockquote class="testimonial" data-reveal>
-          <p class="quote">
-            "The detection engine is fast enough to sit in our hot path. Latency is
-            negligible, and masking means even our logs are safe to ship to SIEM."
-          </p>
-          <div class="who"><span class="avatar">D</span><div><b>Dobromir Kosev</b><span>Security Engineer</span></div></div>
-        </blockquote>
+          <ul class="feature-list">
+            <li>Field-level protection applied before inference</li>
+            <li>Works regardless of LLM, framework or hyperscaler</li>
+            <li>Analytics and development keep using protected values</li>
+          </ul>
+        </div>
+        <div class="viz" data-reveal>
+          <div class="viz-title">Flow: raw data → protected → agent → verified response</div>
+          <div class="viz-row"><span class="tag info">SOURCE</span><span>customer core · Aadhaar · card numbers</span></div>
+          <div class="viz-row"><span class="tag warn">DATA LAYER</span><span>tokenize + mask on read (policy applied)</span></div>
+          <div class="viz-row"><span class="tag info">AGENT</span><span>retrieval over protected knowledge base</span></div>
+          <div class="viz-row"><span class="tag safe">GATEWAY</span><span>prompt scan · no PII/secrets detected</span></div>
+          <div class="viz-row"><span class="tag safe">RESPONSE</span><span>verified · nothing sensitive left the boundary</span></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== RECOGNITION ===================== -->
+  <!-- Editions -->
   <section class="section">
     <div class="container">
       <div class="section-head center">
-        <span class="eyebrow">Recognition</span>
-        <h2>Recognized as a leading AI-native security platform</h2>
+        <span class="eyebrow">Editions</span>
+        <h2>One platform. Three ways in.</h2>
+        <p class="lead">Start free, scale with the agents — or go straight to enterprise-grade controls.</p>
+      </div>
+      <div class="pillars">
+        <article class="pillar" data-reveal>
+          <span class="topline"><b>Developer</b> · free</span>
+          <div class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6M12 19h8"/></svg>
+          </div>
+          <h3>Start building today</h3>
+          <p>SDKs for finding and protecting sensitive data in prompts, logs and text. Free forever for developers.</p>
+          <div class="metric">→ API playground + docs included</div>
+        </article>
+        <article class="pillar" data-reveal>
+          <span class="topline"><b>Team</b> · recommended</span>
+          <div class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Secure agentic AI &amp; tooling</h3>
+          <p>Whatever your AI stack, governed data keeps agents powerful and trustworthy across models and MCP tools.</p>
+          <div class="metric">→ policy + guardrails + audit</div>
+        </article>
+        <article class="pillar" data-reveal>
+          <span class="topline"><b>Enterprise</b> · modular</span>
+          <div class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Full hybrid coverage</h3>
+          <p>Modular protection for AI, analytics and hybrid workloads — agnostic to frameworks, systems and hyperscalers.</p>
+          <div class="metric">→ data sovereignty + compliance automation</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact band -->
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Measured impact</span>
+        <h2>Protection, measured in outcomes</h2>
       </div>
       <div class="stats-band">
-        <div class="stat-block" data-reveal><b>Leader</b><span>AI Security · QKS SPARK Matrix™</span></div>
-        <div class="stat-block" data-reveal><b>#1</b><span>Demo Showdown · Practitioner Vote</span></div>
-        <div class="stat-block" data-reveal><b>Company of the Year</b><span>Frost &amp; Sullivan 2025</span></div>
-        <div class="stat-block" data-reveal><b>Innovator</b><span>MCP Security · Latio 2026</span></div>
+        <div class="stat-block" data-reveal><b>-93%</b><span>alert noise with source-first protection</span></div>
+        <div class="stat-block" data-reveal><b>10x</b><span>faster triage on data exposure</span></div>
+        <div class="stat-block" data-reveal><b>100%</b><span>inference responses re-verified</span></div>
+        <div class="stat-block" data-reveal><b>0</b><span>regulated fields in plaintext at inference</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== CTA ===================== -->
   <section class="cta-band">
     <div class="container">
-      <span class="eyebrow" style="color:var(--accent-2); --eyebrow:var(--accent-2)">Under Attack?</span>
-      <h2>See the fight unfold before it reaches production.</h2>
-      <p>Connect Kavach to your agents and MCP servers. See live inventory, high-signal risks and active containment in under ten minutes.</p>
+      <span class="eyebrow" style="color:var(--accent-2)">Get started</span>
+      <h2>Make your existing stack safe for AI.</h2>
+      <p>Protect the data layer before your agents go live. Book a demo or check your readiness today.</p>
       <div class="hero-cta">
-        <a class="btn btn-accent" href="pages/demo.html">Get a Demo</a>
-        <a class="btn btn-ghost" href="pages/mcp-security.html">Read why MCP Security matters →</a>
+        <a class="btn btn-accent" href="demo.html">Book a demo</a>
+        <a class="btn btn-ghost" href="detection-rules.html">Explore the detection engine →</a>
       </div>
     </div>
   </section>
 
-  <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div>
-          <a class="brand" href="index.html"><img class="logo" src="assets/logo.svg" alt="Kavach-AI logo" />Kavach<span class="ai">-AI</span></a>
-          <p class="about">
-            AI &amp; MCP Security for the Agentic Era. Guardian middleware, live inventory,
-            high-signal exposures and real-time protection — from code to production.
-          </p>
+          <a class="brand" href="../index.html"><img class="logo" src="../assets/logo.svg" alt="Kavach-AI logo" />Kavach-AI</a>
+          <p class="about">AI &amp; MCP Security for the Agentic Era. From code to production.</p>
         </div>
         <div>
           <h5>Platform</h5>
           <ul>
-            <li><a href="pages/platform.html">The Inside-Out Platform</a></li>
-            <li><a href="pages/cloud-security.html">Cloud Security</a></li>
-            <li><a href="pages/data-protection.html">AI Data Protection</a></li>
-            <li><a href="pages/detection-rules.html">Detection Engine</a></li>
-            <li><a href="pages/mcp-security.html">MCP Security</a>
-        <a href="pages/data-protection.html">Data Protection</a></li>
-            <li><a href="pages/demo.html">Request a Demo</a></li>
+            <li><a href="platform.html">The Inside-Out Platform</a></li>
+            <li><a href="cloud-security.html">Cloud Security</a></li>
+            <li><a href="data-protection.html">AI Data Protection</a></li>
+            <li><a href="detection-rules.html">Detection Engine</a></li>
+            <li><a href="demo.html">Request a Demo</a></li>
           </ul>
         </div>
         <div>
           <h5>Detections</h5>
           <ul>
-            <li><a href="pages/detection-rules.html#prompt">Prompt Injection</a></li>
-            <li><a href="pages/detection-rules.html#secrets">Secret Leakage</a></li>
-            <li><a href="pages/detection-rules.html#pii">PII Detection</a></li>
-            <li><a href="pages/detection-rules.html#cloud">Cloud Destruction</a></li>
+            <li><a href="detection-rules.html#prompt">Prompt Injection</a></li>
+            <li><a href="detection-rules.html#secrets">Secret Leakage</a></li>
+            <li><a href="detection-rules.html#pii">PII Detection</a></li>
+            <li><a href="detection-rules.html#cloud">Cloud Destruction</a></li>
           </ul>
         </div>
         <div>
@@ -417,6 +325,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>
