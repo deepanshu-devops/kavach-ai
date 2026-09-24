@@ -1002,6 +1002,13 @@ table.spec {
   max-width: 640px;
 }
 
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
 .form-card .field { margin-bottom: 20px; }
 
 .form-card label {
@@ -1080,7 +1087,8 @@ table.spec {
 
 @media (max-width: 1000px) {
   .hero-grid,
-  .feature-row {
+  .feature-row,
+  .split {
     grid-template-columns: 1fr;
     gap: 40px;
   }
@@ -1102,7 +1110,69 @@ table.spec {
     grid-template-columns: 1fr;
   }
   .hero { padding: 140px 0 80px; }
+  .page-hero { padding: 120px 0 70px; }
   .section { padding: 76px 0; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .arch { padding: 24px 18px; }
+  .arch-layer { padding: 18px; }
+  .form-card { padding: 28px 22px; }
+  .viz { padding: 20px; }
+  .viz-row { flex-wrap: wrap; }
+
+  /* ---------- Mobile nav: burger + dropdown menu ---------- */
+  .nav-burger {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 11px;
+    background: none;
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-sm);
+  }
+  .nav-burger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: var(--text-light);
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-burger.open span:nth-child(2) { opacity: 0; }
+  .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .nav .nav-cta .btn { padding: 8px 14px; font-size: 13px; }
+
+  .nav-inner { position: relative; }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: rgba(20, 18, 23, 0.98);
+    border-bottom: 1px solid var(--border-dark);
+    box-shadow: var(--shadow-dark);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  }
+  .nav-inner.menu-open .nav-links {
+    max-height: 440px;
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-links a {
+    padding: 16px 26px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
   .feature-row { padding: 44px 0; }
 }
