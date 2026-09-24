@@ -57,6 +57,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--font);
   font-size: 16px;
@@ -411,6 +416,7 @@ h3 {
   font-size: 13.5px;
   line-height: 1.75;
   color: #c9d1d9;
+  overflow-wrap: anywhere;
 }
 
 .console-body .c-line { display: flex; gap: 8px; }
@@ -751,6 +757,31 @@ h3 {
 .stat-block span {
   color: var(--text-muted-light);
   font-size: 14px;
+}
+
+/* ==========================================================================
+   Customer logo band
+   ========================================================================== */
+
+.logo-band {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.logo-band span {
+  display: grid;
+  place-items: center;
+  min-height: 74px;
+  padding: 12px 18px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  background: var(--bg-light-2);
+  font-size: 17px;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  color: var(--text-muted-dark);
+  white-space: nowrap;
 }
 
 /* ==========================================================================
@@ -1119,6 +1150,13 @@ table.spec {
   .form-card { padding: 28px 22px; }
   .viz { padding: 20px; }
   .viz-row { flex-wrap: wrap; }
+  .logo-band { grid-template-columns: repeat(2, 1fr); }
+  .logo-band span { min-height: 60px; font-size: 15px; }
+  .console-body { font-size: 12px; padding: 18px 16px 22px; }
+  .console-body .c-line { flex-wrap: wrap; overflow-wrap: anywhere; }
+  .example-pattern,
+  code { overflow-wrap: anywhere; }
+  .table-wrap { margin-inline: -4px; }
 
   /* ---------- Mobile nav: burger + dropdown menu ---------- */
   .nav-burger {
