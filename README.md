@@ -104,11 +104,21 @@ No server-side logic — the whole site deploys as-is.
 
 ## Deploy
 
-The site is static and ready for any host. Suggested path:
+Deployed on GitHub Pages with a custom domain (`docs/` folder, `main` branch).
 
-1. Point `kavach-ai.com` DNS (A/CNAME) to your host (Vercel / Netlify / GitHub Pages).
-2. Deploy the `docs/` folder as the publish root (already wired to GitHub Pages).
-3. Add the same domain as the preferred company domain on LinkedIn.
+DNS records to set at Hostinger → hPanel → Domains → `kavach-ai.com` → DNS:
+
+| Type | Name/Host | Value |
+|------|-----------|-------|
+| A    | `@`       | `185.199.108.153` |
+| A    | `@`       | `185.199.109.153` |
+| A    | `@`       | `185.199.110.153` |
+| A    | `@`       | `185.199.111.153` |
+| CNAME | `www`    | `deepanshu-devops.github.io` (optional) |
+| CAA  | `@`       | `0 issue "letsencrypt.org"` (optional) |
+
+Remove any old parking A record. After DNS propagates, GitHub auto-issues TLS and
+`https://kavach-ai.com/` serves the Data Protection landing page.
 
 ## Contact
 
