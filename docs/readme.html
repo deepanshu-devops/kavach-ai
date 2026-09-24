@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kavach-AI documentation</title>
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<style>
+  :root { --accent:#0969da; --fg:#24292f; --muted:#57606a; --border:#d0d7de; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; color:var(--fg); background:#fff; }
+  header { border-bottom:1px solid var(--border); padding:16px 24px; display:flex; gap:12px; align-items:center; }
+  header .avatar { width:28px; height:28px; border-radius:50%; }
+  header a { color:var(--fg); text-decoration:none; font-weight:600; }
+  header a small { font-weight:400; color:var(--muted); }
+  main { max-width:860px; margin:0 auto; padding:32px 24px 64px; }
+  h1 { border-bottom:1px solid var(--border); padding-bottom:.3em; font-size:2em; }
+  h2 { font-size:1.5em; padding-bottom:.3em; border-bottom:1px solid var(--border); }
+  h1,h2,h3,h4 { margin:24px 0 16px; line-height:1.25; }
+  a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
+  code { background:rgba(175,184,193,.2); padding:.15em .35em; border-radius:6px; font:85% ui-monospace,SFMono-Regular,Menlo,monospace; }
+  pre { background:#f6f8fa; border:1px solid var(--border); border-radius:8px; padding:16px; overflow:auto; }
+  pre code { background:none; padding:0; }
+  table { border-collapse:collapse; display:block; width:100%; overflow:auto; }
+  th,td { border:1px solid var(--border); padding:6px 13px; }
+  th { background:#f6f8fa; }
+  blockquote { border-left:4px solid var(--border); color:var(--muted); margin:0; padding:0 16px; }
+  ul,ol { padding-left:24px; }
+  .badge { display:inline-block; background:#f6f8fa; border:1px solid var(--border); border-radius:99px; padding:2px 10px; font-size:12px; color:var(--muted); margin-left:8px; vertical-align:middle; }
+  footer { border-top:1px solid var(--border); padding:20px 24px; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; color:var(--muted); font-size:14px; }
+  footer a { color:var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <img class="avatar" src="assets/logo.svg" alt="logo">
+  <a href="./">deepanshu-devops/kavach-ai <small>· GitHub Pages</small></a>
+  <span class="badge">README</span>
+</header>
+<main>
+<h1>Kavach-AI</h1>
+<p><strong>AI &amp; MCP Security for the Agentic Era — Cloud &amp; AI Security from the Inside-Out.</strong></p>
+<p>Kavach-AI is a static marketing site for Kavach-AI, a security platform that protects
+AI agents, LLM tool calls, MCP infrastructure and multi-cloud workloads (AWS, Azure, GCP).
+The site pairs the layout and operating model of modern cloud-security platforms with the
+detection engine of the open-source <strong>kavach-mcp</strong> middleware.</p>
+<p>🌐 <a href="https://kavach-ai.com">kavach-ai.com</a> · ✉️ <a href="mailto:corporate@kavach-ai.com">corporate@kavach-ai.com</a></p>
+<hr />
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#why-kavach-ai">Why Kavach-AI</a></li>
+<li><a href="#site-structure">Site structure</a></li>
+<li><a href="#pages">Pages</a></li>
+<li><a href="#detection-engine">Detection engine</a></li>
+<li><a href="#tech-stack">Tech stack</a></li>
+<li><a href="#run-locally">Run locally</a></li>
+<li><a href="#deploy">Deploy</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<h2>Why Kavach-AI</h2>
+<p>AI and MCP infrastructure now change in real time. Manual inventories and periodic scans
+can't keep up. Kavach-AI follows an <strong>Inside-Out</strong> operating model:</p>
+<table>
+<thead>
+<tr>
+<th>Pillar</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Live inventory</strong></td>
+<td>Know what agents, tools, MCP servers, data flows and non-human identities run, connect and expose — refreshed every 30 seconds</td>
+</tr>
+<tr>
+<td><strong>Fix high-signal exposures</strong></td>
+<td>Use live exposure and activity to separate real risk from theoretical risk and cut alert noise</td>
+</tr>
+<tr>
+<td><strong>Real-time protection</strong></td>
+<td>Detect and stop prompt attacks, tool abuse, secrets leakage and cloud destruction while they happen</td>
+</tr>
+</tbody>
+</table>
+<p>The platform content builds on the rule families shipped in <code>kavach-mcp</code> (prompt
+injection, data exfiltration, PII, secret leakage, SQL injection, path traversal,
+filesystem/cloud destruction, shell injection, tool abuse).</p>
+<h2>Site structure</h2>
+<pre><code>kavach-ai/
+├── README.md                       # this file
+├── .gitignore
+├── kavach_mcp-0.1.11/              # open-source detection middleware (reference)
+└── docs/                           # the GitHub Pages site root
+    ├── index.html                  # home — hero, pillars, rules grid, testimonials, CTA
+    ├── css/
+    │   └── style.css               # full design system (dark Inside-Out theme)
+    ├── js/
+    │   └── main.js                 # sticky nav, mobile menu, reveal, demo form
+    ├── pages/
+    │   ├── platform.html           # Inside-Out platform + architecture + capabilities
+    │   ├── cloud-security.html     # AWS · Azure · GCP multi-cloud security
+    │   ├── data-protection.html    # AI data protection: discover → policy → insight
+    │   ├── detection-rules.html    # the 11 detection rule families
+    │   ├── mcp-security.html       # protecting Model Context Protocol tool calls
+    │   └── demo.html               # demo request form + tour
+    └── assets/
+        ├── logo.svg / logo.png     # brand logo (also used as favicon)
+        └── linkedin-cover.png      # LinkedIn company page cover (1584×396)
+</code></pre>
+<h2>Pages</h2>
+<table>
+<thead>
+<tr>
+<th>Route</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/</code></td>
+<td>Landing: Inside-Out positioning, 3 pillars, detection-engine demo, rules grid, testimonials, CTA</td>
+</tr>
+<tr>
+<td><code>/pages/platform.html</code></td>
+<td>The platform: live discovery, attack-path exposure, realtime D&amp;R, architecture</td>
+</tr>
+<tr>
+<td><code>/pages/cloud-security.html</code></td>
+<td>AWS / Azure / GCP coverage, posture, AI &amp; data protection in the cloud</td>
+</tr>
+<tr>
+<td><code>/pages/data-protection.html</code></td>
+<td>Discover → Policy → Insight loop, AI safety controls, editions</td>
+</tr>
+<tr>
+<td><code>/pages/detection-rules.html</code></td>
+<td>Rule families with regex examples + FastMCP integration snippet</td>
+</tr>
+<tr>
+<td><code>/pages/mcp-security.html</code></td>
+<td>Why MCP is the new attack surface; tool inventory, guardrails, audit</td>
+</tr>
+<tr>
+<td><code>/pages/demo.html</code></td>
+<td>Demo request form (client-side), what-you'll-see tour</td>
+</tr>
+</tbody>
+</table>
+<h2>Detection engine</h2>
+<p>The 11 rule families featured on the site come from the <code>KAVACH_RULES</code> set in
+<code>kavach/rules.py</code>:</p>
+<p>Prompt Injection · Data Exfiltration · PII Detection · Secret Leakage · Dangerous
+Execution · SQL Injection · Path Traversal · Filesystem Destruction · Cloud Destruction
+· Shell Injection · Tool Abuse — plus fully custom rules.</p>
+<h2>Tech stack</h2>
+<ul>
+<li><strong>Static site</strong> — no build step, no dependencies</li>
+<li>HTML5 + CSS3 custom design system (CSS variables, grid, reveal-on-scroll)</li>
+<li>Vanilla JavaScript (sticky nav, mobile menu, IntersectionObserver, form handling)</li>
+<li>Inter (Google Fonts) with a system fallback stack</li>
+<li>Brand assets generated as SVG / PNG</li>
+</ul>
+<h2>Run locally</h2>
+<pre><code class="language-bash">cd docs
+python3 -m http.server 8080
+# open http://localhost:8080
+</code></pre>
+<p>Or use any static server (<code>npx serve</code>, Vercel, Netlify, GitHub Pages…).
+No server-side logic — the whole site deploys as-is.</p>
+<h2>Deploy</h2>
+<p>The site is static and ready for any host. Suggested path:</p>
+<ol>
+<li>Point <code>kavach-ai.com</code> DNS (A/CNAME) to your host (Vercel / Netlify / GitHub Pages).</li>
+<li>Deploy the <code>docs/</code> folder as the publish root (already wired to GitHub Pages).</li>
+<li>Add the same domain as the preferred company domain on LinkedIn.</li>
+</ol>
+<h2>Contact</h2>
+<ul>
+<li>Website: <a href="https://kavach-ai.com">https://kavach-ai.com</a></li>
+<li>Email: <a href="mailto:corporate@kavach-ai.com">corporate@kavach-ai.com</a></li>
+<li>LinkedIn: <code>https://linkedin.com/company/kavach-ai</code></li>
+</ul>
+<hr />
+<p>© 2026 Kavach-AI. Built on the kavach-mcp open-source middleware.</p>
+</main>
+<footer>
+  <span>&copy; 2026 Kavach-AI</span>
+  <span><a href="https://kavach-ai.com">kavach-ai.com</a> &middot; <a href="mailto:corporate@kavach-ai.com">corporate@kavach-ai.com</a></span>
+</footer>
+</body>
+</html>
