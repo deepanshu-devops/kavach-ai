@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f6f8fc" />
+  <title>Trust &amp; Security — Kavach-AI</title>
+  <meta name="description" content="How Kavach-AI secures the platform: SOC 2 Type II, ISO 27001 and ISO 42001, encryption, tenant isolation, responsible disclosure and data handling." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600;700;750;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="../assets/logo.svg" />
+  <link rel="icon" type="image/png" href="../assets/logo.png" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="container nav-inner" id="navInner">
+      <a class="brand" href="../index.html"><img class="logo" src="../assets/logo.svg" alt="Kavach-AI" />Kavach<span class="ai">AI</span></a>
+      <nav class="nav-links">
+        <a href="../pages/platform.html">Platform</a>
+        <a href="../pages/cloud-security.html">Cloud Security</a>
+        <a href="../pages/data-protection.html">Data Protection</a>
+        <a href="../pages/detection-rules.html">Detection Engine</a>
+        <a href="../pages/mcp-security.html">MCP Security</a>
+        <a href="../pages/customers.html">Customers</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-sm btn-ghost" href="../pages/demo.html">Get a Demo</a>
+        <button class="nav-burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Home</a><span>→</span><span>Trust &amp; Security</span></div>
+      <h1>Trust, engineered <span style="color:var(--accent-2)">into the platform</span></h1>
+      <p>
+        Kavach-AI protects AI agents and the data they touch — so we hold ourselves to the
+        same standard. Here is how we secure the platform and the controls you can verify.
+      </p>
+      <div class="hero-cta" style="margin-top:32px">
+        <a class="btn btn-accent" href="mailto:security@kavach-ai.com">Contact security</a>
+        <a class="btn btn-ghost" href="#controls">Security controls</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Compliance</span>
+        <h2>Audited, certified, continuously monitored</h2>
+        <p class="lead">Independent audits and always-current evidence, available under NDA in the trust center.</p>
+      </div>
+      <div class="badge-row" style="justify-content:center" data-reveal>
+        <span class="badge-chip"><b>SOC 2</b> Type II</span>
+        <span class="badge-chip"><b>ISO/IEC</b> 27001</span>
+        <span class="badge-chip"><b>ISO/IEC</b> 42001 · AI</span>
+        <span class="badge-chip"><b>GDPR</b> aligned</span>
+        <span class="badge-chip"><b>HIPAA</b> ready</span>
+        <span class="badge-chip"><b>PCI DSS</b> 4.0 ready</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="controls">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Security controls</span>
+        <h2>How the platform protects your data</h2>
+      </div>
+      <div class="rules-grid">
+        <article class="rule-card" data-reveal>
+          <div class="r-head"><h4>Encryption</h4><span class="sev high">Protect</span></div>
+          <p>AES-256 encryption at rest and TLS 1.3 in transit. Customer-managed keys and BYOK available on enterprise plans.</p>
+        </article>
+        <article class="rule-card" data-reveal>
+          <div class="r-head"><h4>Tenant isolation</h4><span class="sev high">Isolate</span></div>
+          <p>Logical isolation per tenant with per-customer data stores, namespaced keys and strictly scoped service identities.</p>
+        </article>
+        <article class="rule-card" data-reveal>
+          <div class="r-head"><h4>Identity &amp; access</h4><span class="sev high">Access</span></div>
+          <p>SAML SSO, SCIM provisioning, role-based access control and mandatory MFA for all Kavach-AI personnel.</p>
+        </article>
+        <article class="rule-card" data-reveal>
+          <div class="r-head"><h4>Secure SDLC</h4><span class="sev critical">Build</span></div>
+          <p>Peer-reviewed changes, signed artifacts, dependency scanning and regular third-party penetration tests.</p>
+        </article>
+        <article class="rule-card" data-reveal>
+          <div class="r-head"><h4>Monitoring &amp; response</h4><span class="sev critical">Detect</span></div>
+          <p>24/7 alerting on anomalous access, centralised immutable audit logs and a documented incident-response plan.</p>
+        </article>
+        <article class="rule-card" data-reveal>
+          <div class="r-head"><h4>Resilience</h4><span class="sev medium">Recover</span></div>
+          <p>Multi-AZ deployment, encrypted backups, tested restore procedures and a published uptime target.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Data handling</span>
+        <h2>What we process, and how</h2>
+        <p class="lead">We never train models on customer data, and we keep deletion and residency explicit.</p>
+      </div>
+      <div class="table-wrap" data-reveal>
+        <table class="spec">
+          <thead>
+            <tr><th>Data</th><th>Why we process it</th><th>How it is protected</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Account &amp; identity data</td><td>Authentication, billing, support</td><td>Encrypted at rest, RBAC-scoped, retained per policy</td></tr>
+            <tr><td>Tool-call metadata</td><td>Detection, inventory, audit</td><td>Encrypted, masked secrets, tenant-isolated</td></tr>
+            <tr><td>Prompt &amp; payload content</td><td>Policy enforcement in transit</td><td>Scanned in memory; not retained by default</td></tr>
+            <tr><td>Telemetry &amp; logs</td><td>Reliability and security monitoring</td><td>Immutable, access-logged, configurable retention</td></tr>
+            <tr><td>Model training</td><td>—</td><td><b>Never uses customer data</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tint">
+    <div class="container">
+      <div class="feature-row" style="padding-top:0">
+        <div class="copy" data-reveal>
+          <span class="eyebrow">Responsible disclosure</span>
+          <h2>Found a vulnerability? Tell us.</h2>
+          <p>
+            We welcome reports from the security community and we will not pursue legal
+            action against good-faith research conducted under our safe-harbor policy.
+          </p>
+          <ul class="feature-list">
+            <li>Email <a href="mailto:security@kavach-ai.com" style="color:var(--accent-3)">security@kavach-ai.com</a> with a proof of concept</li>
+            <li>We acknowledge reports within 2 business days</li>
+            <li>Coordinated disclosure after a 90-day remediation window</li>
+          </ul>
+        </div>
+        <div class="viz" data-reveal>
+          <div class="viz-title">Disclosure workflow</div>
+          <div class="viz-row"><span class="tag info">REPORT</span><span>researcher submits PoC to security@</span></div>
+          <div class="viz-row"><span class="tag info">TRIAGE</span><span>acknowledged in ≤ 2 business days</span></div>
+          <div class="viz-row"><span class="tag warn">FIX</span><span>remediation tracked to close</span></div>
+          <div class="viz-row"><span class="tag safe">DISCLOSE</span><span>coordinated public write-up</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--accent-2)">Trust center</span>
+      <h2>Request the security &amp; compliance pack.</h2>
+      <p>SOC 2 Type II report, penetration-test summary, DPA and sub-processor list — under NDA.</p>
+      <div class="hero-cta">
+        <a class="btn btn-accent" href="mailto:security@kavach-ai.com">Request documents</a>
+        <a class="btn btn-ghost" href="privacy.html">Read the privacy policy →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="../index.html"><img class="logo" src="../assets/logo.svg" alt="Kavach-AI" />Kavach<span class="ai">AI</span></a>
+          <p class="about">AI &amp; MCP Security for the Agentic Era. Live inventory, high-signal exposures and real-time protection for AI agents, MCP servers and multi-cloud workloads.</p>
+          <p class="footer-hq">San Francisco · Bengaluru · London</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/kavach-ai" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+            <a href="https://github.com/kavach-ai" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
+            <a href="https://x.com/kavach_ai" target="_blank" rel="noopener" aria-label="X">X</a>
+          </div>
+        </div>
+        <div>
+          <h5>Platform</h5>
+          <ul>
+            <li><a href="../pages/platform.html">The Inside-Out Platform</a></li>
+            <li><a href="../pages/cloud-security.html">Cloud Security</a></li>
+            <li><a href="../pages/data-protection.html">AI Data Protection</a></li>
+            <li><a href="../pages/detection-rules.html">Detection Engine</a></li>
+            <li><a href="../pages/mcp-security.html">MCP Security</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Company</h5>
+          <ul>
+            <li><a href="../pages/about.html">About</a></li>
+            <li><a href="../pages/trust.html">Trust &amp; Security</a></li>
+            <li><a href="../pages/newsroom.html">Newsroom</a></li>
+            <li><a href="../pages/careers.html">Careers</a></li>
+            <li><a href="../pages/partners.html">Partners</a></li>
+            <li><a href="../pages/customers.html">Customers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="../pages/demo.html">Request a Demo</a></li>
+            <li><a href="../pages/detection-rules.html">Detection Rules</a></li>
+            <li><a href="https://pypi.org/project/kavach-mcp/" target="_blank" rel="noopener">kavach-mcp on PyPI</a></li>
+            <li><a href="mailto:corporate@kavach-ai.com">corporate@kavach-ai.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Kavach-AI, Inc. · <a href="https://kavach-ai.com" target="_blank" rel="noopener">kavach-ai.com</a></span>
+        <span><a href="../pages/privacy.html">Privacy Policy</a> · <a href="../pages/terms.html">Terms of Use</a> · <a href="../pages/trust.html">Security</a> · <a href="https://status.kavach-ai.com" target="_blank" rel="noopener">Status</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /home.html
+Disallow: /readme.html
+
+Sitemap: https://kavach-ai.com/sitemap.xml

@@ -3,14 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f8fc" />
 <title>Kavach-AI documentation</title>
 <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="icon" type="image/png" href="assets/logo.png">
 <style>
-  :root { --accent:#0969da; --fg:#24292f; --muted:#57606a; --border:#d0d7de; }
+  :root { --accent:#c13c26; --fg:#0f172a; --muted:#56637a; --border:#e2e8f0; --page:#f6f8fc; }
   * { box-sizing: border-box; }
-  body { margin:0; font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; color:var(--fg); background:#fff; }
-  header { border-bottom:1px solid var(--border); padding:16px 24px; display:flex; gap:12px; align-items:center; }
-  header .avatar { width:28px; height:28px; border-radius:50%; }
+  body { margin:0; font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; color:var(--fg); background:var(--page); }
+  header { border-bottom:1px solid var(--border); padding:16px 24px; display:flex; gap:12px; align-items:center; background:var(--page); }
+  header .avatar { width:32px; height:32px; border-radius:8px; }
   header a { color:var(--fg); text-decoration:none; font-weight:600; }
   header a small { font-weight:400; color:var(--muted); }
   main { max-width:860px; margin:0 auto; padding:32px 24px 64px; }
@@ -18,15 +20,15 @@
   h2 { font-size:1.5em; padding-bottom:.3em; border-bottom:1px solid var(--border); }
   h1,h2,h3,h4 { margin:24px 0 16px; line-height:1.25; }
   a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
-  code { background:rgba(175,184,193,.2); padding:.15em .35em; border-radius:6px; font:85% ui-monospace,SFMono-Regular,Menlo,monospace; }
-  pre { background:#f6f8fa; border:1px solid var(--border); border-radius:8px; padding:16px; overflow:auto; }
+  code { background:#eef2f9; padding:.15em .35em; border-radius:6px; font:85% ui-monospace,SFMono-Regular,Menlo,monospace; }
+  pre { background:#f8fafc; border:1px solid var(--border); border-radius:8px; padding:16px; overflow:auto; }
   pre code { background:none; padding:0; }
   table { border-collapse:collapse; display:block; width:100%; overflow:auto; }
   th,td { border:1px solid var(--border); padding:6px 13px; }
-  th { background:#f6f8fa; }
+  th { background:#f8fafc; }
   blockquote { border-left:4px solid var(--border); color:var(--muted); margin:0; padding:0 16px; }
   ul,ol { padding-left:24px; }
-  .badge { display:inline-block; background:#f6f8fa; border:1px solid var(--border); border-radius:99px; padding:2px 10px; font-size:12px; color:var(--muted); margin-left:8px; vertical-align:middle; }
+  .badge { display:inline-block; background:#f8fafc; border:1px solid var(--border); border-radius:99px; padding:2px 10px; font-size:12px; color:var(--muted); margin-left:8px; vertical-align:middle; }
   footer { border-top:1px solid var(--border); padding:20px 24px; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; color:var(--muted); font-size:14px; }
   footer a { color:var(--accent); }
 </style>
@@ -38,74 +40,68 @@
   <span class="badge">README</span>
 </header>
 <main>
-<h1>Kavach-AI</h1>
-<p><strong>AI &amp; MCP Security for the Agentic Era — Cloud &amp; AI Security from the Inside-Out.</strong></p>
-<p>Kavach-AI is a static marketing site for Kavach-AI, a security platform that protects
-AI agents, LLM tool calls, MCP infrastructure and multi-cloud workloads (AWS, Azure, GCP).
-The site pairs the layout and operating model of modern cloud-security platforms with the
-detection engine of the open-source <strong>kavach-mcp</strong> middleware.</p>
-<p>🌐 <a href="https://kavach-ai.com">kavach-ai.com</a> · ✉️ <a href="mailto:corporate@kavach-ai.com">corporate@kavach-ai.com</a></p>
-<hr />
-<h2>Table of Contents</h2>
+<h1>Kavach-AI — Website</h1>
+<p>The GitHub Pages site for <strong>Kavach-AI</strong>: <em>AI &amp; MCP Security for the Agentic Era</em>.</p>
+<p><code>docs/</code> is the publish root. It is a plain static site — HTML, one CSS design system and a
+small vanilla-JS file — with no build step and no dependencies. The home page is
+<code>index.html</code>; <code>home.html</code> is kept only as a redirect for old links.</p>
+<p>The layout and section flow are benchmarked against how a modern cloud &amp; AI security vendor
+(<strong>Upwind Security</strong>) presents itself — light "Inside-Out" hero, three operating pillars,
+capability/feature grids, customer logos, recognition band, Trust/Security, Newsroom and
+Careers — while the product narrative is grounded in the <strong>kavach-mcp</strong> open-source
+middleware in this repo (<code>kavach_mcp-0.1.11/</code>).</p>
+<p>The site is <strong>light-themed</strong>: airy surfaces, deep ink text, coral/green/blue accents. The
+console mock (<code>.console</code>) is the one deliberately dark element — it is a product screenshot
+of a terminal.</p>
+<h2>Company realism</h2>
+<p>The company is fictional and presented as a plausible, self-consistent business so the site
+reads like a real vendor. <strong>All customer names, testimonials, funding, investors,
+leadership, offices, awards and dates are original illustrative placeholders</strong> — they are
+not claims about any real person or firm, and no page names Upwind or its real
+awards/customers. Replace the placeholders with verified facts before anything goes live:</p>
 <ul>
-<li><a href="#why-kavach-ai">Why Kavach-AI</a></li>
-<li><a href="#site-structure">Site structure</a></li>
-<li><a href="#pages">Pages</a></li>
-<li><a href="#detection-engine">Detection engine</a></li>
-<li><a href="#tech-stack">Tech stack</a></li>
-<li><a href="#run-locally">Run locally</a></li>
-<li><a href="#deploy">Deploy</a></li>
-<li><a href="#contact">Contact</a></li>
+<li><code>pages/about.html</code> — founders, mission, funding, investors, offices</li>
+<li><code>pages/newsroom.html</code> — press releases, research, dates</li>
+<li><code>pages/careers.html</code> — open roles and locations</li>
+<li><code>pages/partners.html</code> — partner program and integrations</li>
+<li><code>pages/trust.html</code> — certifications and security controls</li>
+<li><code>pages/customers.html</code> and the home/testimonial sections — customer names &amp; quotes</li>
 </ul>
-<h2>Why Kavach-AI</h2>
-<p>AI and MCP infrastructure now change in real time. Manual inventories and periodic scans
-can't keep up. Kavach-AI follows an <strong>Inside-Out</strong> operating model:</p>
-<table>
-<thead>
-<tr>
-<th>Pillar</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Live inventory</strong></td>
-<td>Know what agents, tools, MCP servers, data flows and non-human identities run, connect and expose — refreshed every 30 seconds</td>
-</tr>
-<tr>
-<td><strong>Fix high-signal exposures</strong></td>
-<td>Use live exposure and activity to separate real risk from theoretical risk and cut alert noise</td>
-</tr>
-<tr>
-<td><strong>Real-time protection</strong></td>
-<td>Detect and stop prompt attacks, tool abuse, secrets leakage and cloud destruction while they happen</td>
-</tr>
-</tbody>
-</table>
-<p>The platform content builds on the rule families shipped in <code>kavach-mcp</code> (prompt
-injection, data exfiltration, PII, secret leakage, SQL injection, path traversal,
-filesystem/cloud destruction, shell injection, tool abuse).</p>
+<p>See the root <a href="../README.md">README.md</a> for the full company-facts list.</p>
+<p>Documentation is kept in sync across five files — <code>README.md</code>, <a href="../instruction.md"><code>../instruction.md</code></a>
+(the agent-facing twin), this file, <code>readme.html</code> (the HTML twin of this file) and
+<code>sitemap.xml</code>. Update them together whenever the site changes.</p>
 <h2>Site structure</h2>
-<pre><code>kavach-ai/
-├── README.md                       # this file
-├── .gitignore
-├── kavach_mcp-0.1.11/              # open-source detection middleware (reference)
-└── docs/                           # the GitHub Pages site root
-    ├── index.html                  # home — hero, pillars, rules grid, testimonials, CTA
-    ├── css/
-    │   └── style.css               # full design system (dark Inside-Out theme)
-    ├── js/
-    │   └── main.js                 # sticky nav, mobile menu, reveal, demo form
-    ├── pages/
-    │   ├── platform.html           # Inside-Out platform + architecture + capabilities
-    │   ├── cloud-security.html     # AWS · Azure · GCP multi-cloud security
-    │   ├── data-protection.html    # AI data protection: discover → policy → insight
-    │   ├── detection-rules.html    # the 11 detection rule families
-    │   ├── mcp-security.html       # protecting Model Context Protocol tool calls
-    │   └── demo.html               # demo request form + tour
-    └── assets/
-        ├── logo.svg / logo.png     # brand logo (also used as favicon)
-        └── linkedin-cover.png      # LinkedIn company page cover (1584×396)
+<pre><code>docs/                             # GitHub Pages publish root
+├── index.html                    # Home — hero, pillars, rules grid, testimonials, CTA
+├── home.html                     # legacy alias → meta-refresh redirect to index.html
+├── readme.html                   # HTML twin of this file (served at /readme.html)
+├── README.md                     # this file
+├── robots.txt                    # crawler directives + sitemap pointer
+├── sitemap.xml                   # all public routes
+├── CNAME                         # custom domain (kavach-ai.com)
+├── css/
+│   └── style.css                 # full design system (light theme)
+├── js/
+│   └── main.js                   # sticky nav, mobile menu, reveal-on-scroll, demo form
+├── pages/
+│   ├── platform.html             # Inside-Out platform + architecture + capabilities
+│   ├── cloud-security.html       # AWS · Azure · GCP multi-cloud security
+│   ├── data-protection.html      # AI data protection: discover → policy → insight
+│   ├── detection-rules.html      # the 11 detection rule families
+│   ├── mcp-security.html         # protecting Model Context Protocol tool calls
+│   ├── customers.html            # logo band + case studies
+│   ├── about.html                # mission, story, leadership, investors
+│   ├── trust.html                # Trust &amp; Security: certifications, controls, disclosure
+│   ├── newsroom.html             # news, research, press kit
+│   ├── careers.html              # values, benefits, open roles, hiring process
+│   ├── partners.html             # partner programs and ecosystem
+│   ├── privacy.html              # Privacy Policy
+│   ├── terms.html                # Terms of Use
+│   └── demo.html                 # demo request form + tour
+└── assets/
+    ├── logo.svg / logo.png       # brand logo (also used as favicon)
+    └── linkedin-cover.png        # LinkedIn company page cover (1584×396)
 </code></pre>
 <h2>Pages</h2>
 <table>
@@ -118,7 +114,7 @@ filesystem/cloud destruction, shell injection, tool abuse).</p>
 <tbody>
 <tr>
 <td><code>/</code></td>
-<td>Landing: Inside-Out positioning, 3 pillars, detection-engine demo, rules grid, testimonials, CTA</td>
+<td>Landing: Inside-Out positioning, 3 pillars, detection-engine demo, rules grid, testimonials, recognition, CTA</td>
 </tr>
 <tr>
 <td><code>/pages/platform.html</code></td>
@@ -141,44 +137,203 @@ filesystem/cloud destruction, shell injection, tool abuse).</p>
 <td>Why MCP is the new attack surface; tool inventory, guardrails, audit</td>
 </tr>
 <tr>
+<td><code>/pages/customers.html</code></td>
+<td>Customer logos and three case-study spotlights</td>
+</tr>
+<tr>
+<td><code>/pages/about.html</code></td>
+<td>Company mission, story timeline, leadership, investors</td>
+</tr>
+<tr>
+<td><code>/pages/trust.html</code></td>
+<td>Certifications, security controls, data handling, responsible disclosure</td>
+</tr>
+<tr>
+<td><code>/pages/newsroom.html</code></td>
+<td>Press releases, threat research and a media kit</td>
+</tr>
+<tr>
+<td><code>/pages/careers.html</code></td>
+<td>Culture, benefits, open roles and hiring process</td>
+</tr>
+<tr>
+<td><code>/pages/partners.html</code></td>
+<td>Cloud alliances, technology and reseller/MSSP programs</td>
+</tr>
+<tr>
+<td><code>/pages/privacy.html</code> · <code>/pages/terms.html</code></td>
+<td>Legal</td>
+</tr>
+<tr>
 <td><code>/pages/demo.html</code></td>
 <td>Demo request form (client-side), what-you'll-see tour</td>
 </tr>
 </tbody>
 </table>
+<h2>Navigation &amp; branding</h2>
+<ul>
+<li>The top nav carries the six product links: Platform, Cloud Security, Data Protection,
+Detection Rules, MCP Security, Customers.</li>
+<li>The company pages (About, Trust, Newsroom, Careers, Partners) and legal links live in the
+footer's <strong>Company</strong>, <strong>Resources</strong> and bottom bar — matching how real vendors
+separate product navigation from corporate navigation.</li>
+<li>Brand markup is consistently <code>Kavach&lt;span class="ai"&gt;AI&lt;/span&gt;</code> and the footer is the
+same four-column block (brand + Platform + Company + Resources) on every page.</li>
+</ul>
+<h2>Design tokens</h2>
+<p>All tokens live in the <code>:root</code> block of <code>css/style.css</code> — never hard-code a colour in a
+component rule. The palette is tuned so every text/background pair meets WCAG AA on the light
+theme.</p>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Value</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--page</code></td>
+<td><code>#f6f8fc</code></td>
+<td>Page background, default sections, footer</td>
+</tr>
+<tr>
+<td><code>--surface</code></td>
+<td><code>#ffffff</code></td>
+<td>Cards, panels, <code>.section.alt</code>, tables, forms</td>
+</tr>
+<tr>
+<td><code>--surface-2</code></td>
+<td><code>#f8fafc</code></td>
+<td>Inset surfaces: table heads, code blocks, inputs</td>
+</tr>
+<tr>
+<td><code>--tint</code></td>
+<td><code>#eef2f9</code></td>
+<td>Tinted bands (<code>&lt;section class="section tint"&gt;</code>)</td>
+</tr>
+<tr>
+<td><code>--border</code> / <code>--border-strong</code></td>
+<td><code>#e2e8f0</code> / <code>#cbd5e1</code></td>
+<td>Hairlines, card and input borders</td>
+</tr>
+<tr>
+<td><code>--text</code> / <code>--text-muted</code></td>
+<td><code>#0f172a</code> / <code>#56637a</code></td>
+<td>Headings and body / secondary copy</td>
+</tr>
+<tr>
+<td><code>--accent</code></td>
+<td><code>#c13c26</code></td>
+<td>Primary CTA, eyebrows, links — AA-safe on light</td>
+</tr>
+<tr>
+<td><code>--accent-glow</code></td>
+<td><code>#f2583c</code></td>
+<td>Gradients and glows only, never small text</td>
+</tr>
+<tr>
+<td><code>--accent-2</code></td>
+<td><code>#356b1c</code></td>
+<td>Trust metrics, green highlights</td>
+</tr>
+<tr>
+<td><code>--accent-3</code></td>
+<td><code>#0f6b9f</code></td>
+<td>Info, kickers, footer links</td>
+</tr>
+<tr>
+<td><code>--danger</code> / <code>--warning</code> / <code>--safe</code></td>
+<td><code>#c0271d</code> / <code>#b45309</code> / <code>#356b1c</code></td>
+<td>Status text on their <code>-soft</code> tints</td>
+</tr>
+</tbody>
+</table>
+<p>Section variants: <code>section</code> (transparent → <code>--page</code>), <code>section alt</code> (white), <code>section tint</code>
+(soft blue-grey band), <code>hero</code> / <code>page-hero</code> (white → <code>#eef3fb</code> gradient with colour radials),
+<code>cta-band</code> (coral → violet → blue tint gradient), <code>footer</code> (<code>--page</code> with a top hairline).
+The <code>.console</code> block is intentionally dark — it is a terminal mock, not the theme.</p>
+<p>Typography: <strong>Inter</strong> (Google Fonts, with a system fallback stack).</p>
+<h2>Brand assets</h2>
+<ul>
+<li><code>assets/logo.svg</code> — source of truth for the mark: a light rounded tile with a soft brand
+edge, a gradient armour shield (<code>#2f9fe0 → #7c3aed → #c026d3</code>) and a green verified check.</li>
+<li><code>assets/logo.png</code> — 512×512 raster fallback, generated from the same geometry.</li>
+<li>Regenerate the PNG after editing the SVG (needs Pillow + NumPy), from the repo root:</li>
+</ul>
+<pre><code class="language-bash">python tools/generate_logo.py
+</code></pre>
+<ul>
+<li>The logo doubles as the favicon: every page links <code>assets/logo.svg</code> and <code>assets/logo.png</code>
+(<code>../assets/…</code> from <code>pages/</code>). The mark must stay legible on white.</li>
+</ul>
 <h2>Detection engine</h2>
 <p>The 11 rule families featured on the site come from the <code>KAVACH_RULES</code> set in
 <code>kavach/rules.py</code>:</p>
 <p>Prompt Injection · Data Exfiltration · PII Detection · Secret Leakage · Dangerous
 Execution · SQL Injection · Path Traversal · Filesystem Destruction · Cloud Destruction
 · Shell Injection · Tool Abuse — plus fully custom rules.</p>
-<h2>Tech stack</h2>
-<ul>
-<li><strong>Static site</strong> — no build step, no dependencies</li>
-<li>HTML5 + CSS3 custom design system (CSS variables, grid, reveal-on-scroll)</li>
-<li>Vanilla JavaScript (sticky nav, mobile menu, IntersectionObserver, form handling)</li>
-<li>Inter (Google Fonts) with a system fallback stack</li>
-<li>Brand assets generated as SVG / PNG</li>
-</ul>
 <h2>Run locally</h2>
+<p>No build step — serve the folder statically:</p>
 <pre><code class="language-bash">cd docs
 python3 -m http.server 8080
 # open http://localhost:8080
 </code></pre>
-<p>Or use any static server (<code>npx serve</code>, Vercel, Netlify, GitHub Pages…).
-No server-side logic — the whole site deploys as-is.</p>
+<p>Or use any static server (<code>npx serve</code>, Vercel, Netlify, GitHub Pages…).</p>
 <h2>Deploy</h2>
-<p>The site is static and ready for any host. Suggested path:</p>
-<ol>
-<li>Point <code>kavach-ai.com</code> DNS (A/CNAME) to your host (Vercel / Netlify / GitHub Pages).</li>
-<li>Deploy the <code>docs/</code> folder as the publish root (already wired to GitHub Pages).</li>
-<li>Add the same domain as the preferred company domain on LinkedIn.</li>
-</ol>
-<h2>Contact</h2>
+<p>Deployed on GitHub Pages with a custom domain (<code>docs/</code> folder, <code>main</code> branch).
+<code>index.html</code> is the home page; <code>home.html</code> is kept only as a redirect.</p>
+<p>DNS records to set at Hostinger → hPanel → Domains → <code>kavach-ai.com</code> → DNS:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name/Host</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td><code>@</code></td>
+<td><code>185.199.108.153</code></td>
+</tr>
+<tr>
+<td>A</td>
+<td><code>@</code></td>
+<td><code>185.199.109.153</code></td>
+</tr>
+<tr>
+<td>A</td>
+<td><code>@</code></td>
+<td><code>185.199.110.153</code></td>
+</tr>
+<tr>
+<td>A</td>
+<td><code>@</code></td>
+<td><code>185.199.111.153</code></td>
+</tr>
+<tr>
+<td>CNAME</td>
+<td><code>www</code></td>
+<td><code>deepanshu-devops.github.io</code> (optional)</td>
+</tr>
+<tr>
+<td>CAA</td>
+<td><code>@</code></td>
+<td><code>0 issue "letsencrypt.org"</code> (optional)</td>
+</tr>
+</tbody>
+</table>
+<p>After DNS propagates, GitHub auto-issues TLS and <code>https://kavach-ai.com/</code> serves the home
+page.</p>
+<h2>Credit</h2>
 <ul>
-<li>Website: <a href="https://kavach-ai.com">https://kavach-ai.com</a></li>
-<li>Email: <a href="mailto:corporate@kavach-ai.com">corporate@kavach-ai.com</a></li>
-<li>LinkedIn: <code>https://linkedin.com/company/kavach-ai</code></li>
+<li>Product content derived from the <strong>kavach-mcp</strong> package (<code>kavach/engine.py</code>,
+<code>kavach/rules.py</code>, <code>kavach/middleware.py</code>).</li>
+<li>Layout/structure benchmarked against <strong>Upwind</strong> (<code>upwind.io</code>), a cloud &amp; AI security
+platform. All copy, names and facts are original to this project.</li>
 </ul>
 <hr />
 <p>© 2026 Kavach-AI. Built on the kavach-mcp open-source middleware.</p>
