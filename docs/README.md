@@ -141,6 +141,9 @@ Typography: **Inter** (Google Fonts, with a system fallback stack).
 
 - The logo doubles as the favicon: every page links `assets/logo.svg` and `assets/logo.png`
   (`../assets/…` from `pages/`). The mark must stay legible on white.
+- Both references carry a shared cache-busting query (`?v=2`). Browsers keep favicons in a
+  separate cache that ignores `Cache-Control`, so bump that number on every page whenever
+  either asset changes.
 
 ## Detection engine
 

@@ -231,6 +231,21 @@ Other type tokens: `--radius-lg/md/sm` (24/16/10), `--shadow-soft`, `--shadow-st
   It needs Pillow + NumPy and reproduces the SVG faithfully (verified against a Chromium render).
 - The logo is the favicon: every page links `assets/logo.svg` and `assets/logo.png`
   (`../assets/…` from `docs/pages/`).
+- **Cache-busting.** Every logo/favicon reference carries one shared version query:
+  `assets/logo.svg?v=2` and `assets/logo.png?v=2`. Browsers keep favicons in a separate store
+  that ignores `Cache-Control`, so a changed mark can otherwise stay stale for days. After
+  editing either asset, bump the number on every page in one pass:
+
+  ```powershell
+  Get-ChildItem docs -Recurse -Include *.html | ForEach-Object {
+    $t = [IO.File]::ReadAllText($_.FullName)
+    $t = $t -replace 'assets/logo\.(svg|png)\?v=\d+', 'assets/logo.$1?v=3'
+    [IO.File]::WriteAllText($_.FullName, $t, (New-Object Text.UTF8Encoding($false)))
+  }
+  ```
+
+  Keep the same number on `/logo.svg` and `/logo.png`, and never change the mark without
+  bumping it — that is the only reliable way to refresh a cached favicon.
 - The mark must stay legible on white: never put the logo on a dark fill without checking it.
 
 ---

@@ -185,7 +185,8 @@ Execution · SQL Injection · Path Traversal · Filesystem Destruction · Cloud 
 - Vanilla JavaScript (sticky nav, mobile menu, IntersectionObserver, form handling)
 - Inter (Google Fonts) with a system fallback stack
 - Brand assets generated as SVG / PNG — `tools/generate_logo.py` rebuilds `docs/assets/logo.png`
-  from the same geometry as `docs/assets/logo.svg`
+  from the same geometry as `docs/assets/logo.svg`. Logo and favicon links carry a shared
+  cache-busting query (`?v=2`) that must be bumped whenever the mark changes
 
 ## Run locally
 
