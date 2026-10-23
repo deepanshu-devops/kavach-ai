@@ -70,8 +70,8 @@ the **console mock** (`.console`), which is a product screenshot of a terminal.
 
 The site presents a fictional but plausible vendor. **All customer names, testimonials, funding,
 investors, leadership, offices, awards and dates are original illustrative placeholders** — they
-are not claims about any real person or firm, and no page names Upwind or its real
-awards/customers. When the site goes live, replace the placeholders with verified facts:
+are not claims about any real person or firm. When the site goes live, replace the placeholders
+with verified facts:
 
 - `docs/pages/about.html` — founders, mission, funding, investors, offices
 - `docs/pages/newsroom.html` — press releases, research, dates
@@ -79,6 +79,11 @@ awards/customers. When the site goes live, replace the placeholders with verifie
 - `docs/pages/partners.html` — partner program and integrations
 - `docs/pages/trust.html` — certifications and security controls
 - `docs/pages/customers.html` and the home/testimonial sections — customer names & quotes
+
+**Never name a third-party company in the site or the docs.** Describe layouts generically
+("a conventional security-vendor pattern"); do not cite a real vendor, its domain, customers
+or awards, and keep no downloaded third-party pages in the repo. Structural inspiration is
+fine; attribution and copied assets are not.
 
 ### 2.3 Static site, no build step
 

@@ -6,11 +6,10 @@ The GitHub Pages site for **Kavach-AI**: *AI & MCP Security for the Agentic Era*
 small vanilla-JS file — with no build step and no dependencies. The home page is
 `index.html`; `home.html` is kept only as a redirect for old links.
 
-The layout and section flow are benchmarked against how a modern cloud & AI security vendor
-(**Upwind Security**) presents itself — a light "Inside-Out" hero, three operating pillars,
-capability/feature grids, customer logos, recognition band, Trust/Security, Newsroom and
-Careers — while the product narrative is grounded in the **kavach-mcp** open-source
-middleware in this repo (`kavach_mcp-0.1.11/`).
+The layout and section flow follow a conventional modern security-vendor pattern — a light
+"Inside-Out" hero, three operating pillars, capability/feature grids, customer logos,
+recognition band, Trust/Security, Newsroom and Careers — while the product narrative is
+grounded in the **kavach-mcp** open-source middleware in this repo (`kavach_mcp-0.1.11/`).
 
 The site is **light-themed**: airy surfaces, deep ink text, coral/green/blue accents. The
 console mock (`.console`) is the one deliberately dark element — it is a product screenshot
@@ -21,8 +20,8 @@ of a terminal.
 The company is fictional and presented as a plausible, self-consistent business so the site
 reads like a real vendor. **All customer names, testimonials, funding, investors,
 leadership, offices, awards and dates are original illustrative placeholders** — they are
-not claims about any real person or firm, and no page names Upwind or its real
-awards/customers. Replace the placeholders with verified facts before anything goes live:
+not claims about any real person or firm. Replace the placeholders with verified facts
+before anything goes live:
 
 - `pages/about.html` — founders, mission, funding, investors, offices
 - `pages/newsroom.html` — press releases, research, dates
@@ -189,8 +188,8 @@ page.
 
 - Product content derived from the **kavach-mcp** package (`kavach/engine.py`,
   `kavach/rules.py`, `kavach/middleware.py`).
-- Layout/structure benchmarked against **Upwind** (`upwind.io`), a cloud & AI security
-  platform. All copy, names and facts are original to this project.
+- Layout and structure follow common cloud-security site conventions. All copy, names and
+  facts are original to this project.
 
 ---
 

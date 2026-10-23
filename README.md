@@ -46,11 +46,11 @@ dark element, because it is a product screenshot of a terminal.
 
 ## Company realism
 
-The site is a presentation of a fictional company, modelled on how a real cloud & AI
-security vendor (**Upwind Security**) presents itself — a light "Inside-Out" hero, three
-operating pillars, capability/feature grids, customer logos, analyst recognition, a
-Trust/Security page, Newsroom, Careers and Partners — while the product narrative is
-grounded in the `kavach-mcp` open-source middleware in this repo.
+The site is a presentation of a fictional company built on a conventional security-vendor
+layout — a light "Inside-Out" hero, three operating pillars, capability/feature grids,
+customer logos, analyst recognition, a Trust/Security page, Newsroom, Careers and
+Partners — while the product narrative is grounded in the `kavach-mcp` open-source
+middleware in this repo.
 
 To keep the company believable and self-consistent (and to avoid impersonation), **all
 customer names, testimonials, funding, investors, leadership, offices, awards and dates
@@ -64,8 +64,10 @@ the site goes live, replace them with verified facts:
 - `pages/trust.html` — certifications and security controls
 - `pages/customers.html` and the home/testimonial sections — customer names & quotes
 
-No page references Upwind or its real awards/customers; the layout is merely the
-benchmark. See [docs/README.md](docs/README.md) for the design-language notes.
+Every page, name, logo and quote on the site is original to this project. The layout is a
+general industry pattern, not a reproduction of any specific vendor's site. **Do not name a
+third-party company as a design source**, link its domain, or keep downloaded third-party
+pages in the repo. See [docs/README.md](docs/README.md) for the design-language notes.
 
 ## Documentation sync
 
